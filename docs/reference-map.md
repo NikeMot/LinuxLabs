@@ -2,7 +2,7 @@
 
 ### Purpose
 
-This file maps the LinuxLabs programme to the reference books and operational thinking sources.
+This file maps the LinuxLabs programme to the reference books, operational thinking sources, and AI-assisted operations standards.
 
 ### Core Thinking Sources
 
@@ -22,11 +22,26 @@ This file maps the LinuxLabs programme to the reference books and operational th
 | Red Hat documentation | RHEL-specific implementation and administration guidance |
 | Ubuntu documentation | Ubuntu-specific implementation and administration guidance |
 
+### AI-Assisted Operations Sources
+
+| Source | Used for |
+| --- | --- |
+| AI tool documentation | Understanding tool limitations, safe usage patterns, and prompt structure |
+| Vendor documentation | Checking AI suggestions against authoritative product behaviour |
+| Local command output | Verifying the real state of the system |
+| Local logs and configuration files | Validating troubleshooting hypotheses and final outcomes |
+
 ### Distribution Rule
 
 Labs should normally compare **RHEL** and **Ubuntu**.
 
 If a lab cannot reasonably be completed on both distributions, the lab must explain why and record the limitation.
+
+### AI Usage Rule
+
+AI can be used to support explanation, planning, documentation, comparison, and troubleshooting.
+
+AI output should not be treated as evidence. Every important result must be verified using local system evidence, official documentation, logs, or command output.
 
 ### Reference Usage Rule
 
