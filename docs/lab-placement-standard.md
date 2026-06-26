@@ -50,5 +50,8 @@ Example:
 | CPU, memory, disk, process pressure | `10-performance-and-capacity/` |
 | Bash, Ansible, cloud-init, drift | `11-automation-and-configuration-management/` |
 | capstone and multi-server operations | `12-linux-estate-operations/` |
+| AI-assisted Linux operations | `13-ai-assisted-linux-operations/` |
 
 If a lab covers several areas, place it in the folder for the primary skill being tested and mention the supporting skills inside the lab.
+
+AI may also appear as a supporting section inside another topic lab when it helps with explanation, review, documentation, or troubleshooting.
