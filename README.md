@@ -2,9 +2,9 @@
 
 ### Overview
 
-The LinuxLabs repository contains my hands-on Linux system administration labs aimed at developing practical Linux, infrastructure, and SRE operations skills.
+The LinuxLabs repository contains my hands-on Linux system administration labs aimed at developing practical Linux, infrastructure, SRE operations, and AI-assisted operations skills.
 
-The lab series focuses on administering both **RHEL** and **Ubuntu** systems. The goal is not just to learn commands, but to build production-style operational judgement: build, verify, troubleshoot, document, recover, compare distributions, and explain decisions.
+The lab series focuses on administering both **RHEL** and **Ubuntu** systems. The goal is not just to learn commands, but to build production-style operational judgement: build, verify, troubleshoot, document, recover, compare distributions, use AI responsibly, and explain decisions.
 
 The major skills covered in this repository are:
 
@@ -20,8 +20,9 @@ The major skills covered in this repository are:
 * Performance and capacity investigation
 * Bash automation, Ansible, and configuration management
 * Linux estate operations and capstone scenarios
+* AI-assisted Linux operations and documentation
 
-Each lab should be documented with requirements, constraints, implementation notes, commands used, verification evidence, issues encountered, decisions made, production considerations, and reflection questions.
+Each lab should be documented with requirements, constraints, implementation notes, commands used, verification evidence, issues encountered, decisions made, production considerations, AI usage notes where relevant, and reflection questions.
 
 ### Goals
 
@@ -30,9 +31,10 @@ The goals of this repository are:
 * Build repeatable Linux administration skills through hands-on labs
 * Practise RHEL and Ubuntu administration side by side
 * Develop production-grade troubleshooting habits
+* Use AI as an assistant for explanation, documentation, command review, log summarisation, and hypothesis generation without outsourcing judgement
 * Document technical decisions clearly
 * Create evidence of operational thinking, verification, and recovery
-* Prepare for Linux system administrator, infrastructure engineer, SRE, and platform engineering roles
+* Prepare for Linux system administrator, infrastructure engineer, SRE, platform engineering, and AI-enabled operations roles
 
 ### Skills Covered
 
@@ -50,6 +52,7 @@ The goals of this repository are:
 | Performance and capacity | Not started | CPU, memory, disk, processes, limits, bottlenecks |
 | Automation and configuration management | Not started | Bash health checks, Ansible, idempotency, drift control |
 | Linux estate operations | Not started | multi-server operations, capstone incidents, runbooks |
+| AI-assisted Linux operations | Not started | prompting, command review, log triage, documentation drafts, runbook generation, safety checks |
 
 ### Repository Structure
 
@@ -68,6 +71,7 @@ The goals of this repository are:
 | `10-performance-and-capacity/` | CPU, memory, disk, process, and service capacity investigation labs |
 | `11-automation-and-configuration-management/` | Bash automation, Ansible, cloud-init, and drift management labs |
 | `12-linux-estate-operations/` | Multi-server production simulation and capstone operational labs |
+| `13-ai-assisted-linux-operations/` | Responsible AI usage for Linux operations, troubleshooting, documentation, and safety review labs |
 
 ### Naming Convention
 
@@ -105,6 +109,7 @@ Each lab folder or lab file should include:
 * RHEL vs Ubuntu comparison
 * Break/fix scenario
 * Post-reboot verification
+* AI-assisted operations notes, where relevant
 * Issues encountered
 * Decisions made
 * Security and production considerations
@@ -115,7 +120,7 @@ Each lab folder or lab file should include:
 * Completion checklist
 * Reflection questions
 
-Start with `01-linux-foundations` and progress numerically.
+Start with `01-linux-foundations` and progress numerically. Use `13-ai-assisted-linux-operations` for dedicated AI operations labs, but also include AI notes inside other labs where AI is useful for explanation, review, documentation, or troubleshooting.
 
 ### Security and Privacy Notes
 
@@ -132,6 +137,12 @@ The repository must not contain:
 * Copyrighted training material
 * Sensitive logs
 * Private IP addressing or hostnames from a real employer environment
+
+### AI Usage Rule
+
+AI may be used as a learning and operations assistant, but it must not replace verification.
+
+Use AI for explanation, planning, command review, log summaries, runbook drafts, comparison notes, and checklists. Always validate AI suggestions with real command output, logs, documentation, and post-reboot testing.
 
 ### Lab Upload Rule
 
