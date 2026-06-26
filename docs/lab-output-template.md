@@ -44,6 +44,7 @@ The scenario should read like a ticket or operational request, not just a tutori
 | Cloud operations thinking | The Practice of Cloud System Administration |
 | RHEL-specific guidance | Red Hat documentation |
 | Ubuntu-specific guidance | Ubuntu documentation |
+| AI-assisted operations | Lab notes, official product documentation, and verified system evidence |
 
 ---
 
@@ -67,6 +68,7 @@ Examples:
 * Do not commit secrets, SSH private keys, credentials, PDFs, EPUBs, or company data.
 * Do not rely on commands you cannot explain.
 * Do not mark the lab complete without post-reboot verification.
+* Do not treat AI output as proof without local verification.
 
 ---
 
@@ -104,6 +106,7 @@ Example:
 | Verification evidence | Proves the work succeeded |
 | RHEL vs Ubuntu notes | Captures distribution differences |
 | Break/fix notes | Records troubleshooting and recovery |
+| AI-assisted operations notes | Records where AI helped and what was verified independently |
 | Runbook notes | Captures repeatable operational procedure |
 
 ---
@@ -192,7 +195,21 @@ Nothing counts unless it survives reboot.
 
 ---
 
-## 16. Diagram
+## 16. AI-Assisted Operations Notes
+
+Use this section when AI was used during the lab.
+
+| AI use | What it helped with | What I independently verified | Evidence |
+| --- | --- | --- | --- |
+| | | | |
+
+If AI was not used, write:
+
+> AI was not used for this lab.
+
+---
+
+## 17. Diagram
 
 Add a diagram if useful.
 
@@ -213,7 +230,7 @@ flowchart LR
 
 ---
 
-## 17. Issues Encountered
+## 18. Issues Encountered
 
 | Issue | Cause | Fix |
 | --- | --- | --- |
@@ -225,7 +242,7 @@ If there were no issues, write:
 
 ---
 
-## 18. Decisions Made
+## 19. Decisions Made
 
 | Decision | Reason |
 | --- | --- |
@@ -234,7 +251,7 @@ If there were no issues, write:
 
 ---
 
-## 19. Security and Production Considerations
+## 20. Security and Production Considerations
 
 Explain the production relevance of the lab.
 
@@ -249,28 +266,29 @@ Cover where relevant:
 * monitoring
 * operational risk
 * documentation quality
+* responsible AI usage
 
 ---
 
-## 20. Final Outcome
+## 21. Final Outcome
 
 State clearly whether the lab was completed.
 
 ---
 
-## 21. What I Learned
+## 22. What I Learned
 
 Write 3–6 bullet points.
 
 ---
 
-## 22. What I Would Improve in Production
+## 23. What I Would Improve in Production
 
 Write 2–5 bullet points.
 
 ---
 
-## 23. References Used
+## 24. References Used
 
 | Reference | Used for |
 | --- | --- |
@@ -279,7 +297,7 @@ Write 2–5 bullet points.
 
 ---
 
-## 24. Completion Checklist
+## 25. Completion Checklist
 
 * [ ] Requirements understood
 * [ ] RHEL implementation completed or explicitly marked out of scope
@@ -288,6 +306,7 @@ Write 2–5 bullet points.
 * [ ] RHEL vs Ubuntu comparison completed
 * [ ] Break/fix scenario completed
 * [ ] Post-reboot verification completed
+* [ ] AI-assisted operations notes completed or marked not used
 * [ ] Issues documented
 * [ ] Decisions documented
 * [ ] Security and production considerations documented
@@ -298,7 +317,7 @@ Write 2–5 bullet points.
 
 ---
 
-## 25. Reflection Questions
+## 26. Reflection Questions
 
 1. What problem did this lab simulate?
 2. Which commands mattered most, and why?
@@ -307,6 +326,8 @@ Write 2–5 bullet points.
 5. What evidence proves the final state works?
 6. Did the configuration survive reboot?
 7. What would be risky about doing this in production?
-8. What would you automate next?
-9. What would you monitor?
-10. What documentation would another engineer need to support this system?
+8. Did AI help with explanation, review, troubleshooting, or documentation?
+9. What did you verify independently instead of trusting AI output?
+10. What would you automate next?
+11. What would you monitor?
+12. What documentation would another engineer need to support this system?
