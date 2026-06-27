@@ -39,13 +39,38 @@ Each drill should feel like operational work:
 | 05 | `drills/05-patching-software-and-rollback/` | Patching, software, and rollback | apt, dnf, dependencies, source installs, update risk, package verification |
 | 06 | `drills/06-monitoring-performance-and-capacity/` | Monitoring, performance, and capacity | sysstat, CPU, memory, disk, I/O, process investigation, capacity notes |
 | 07 | `drills/07-security-hardening-and-incident-response/` | Security hardening and incident response | root protection, SSH hardening, firewalling, account review, logs, suspicious activity response |
-| 08 | `drills/08-full-linux-operations-capstone/` | Full Linux operations capstone | all prior skills: build, operate, break, recover, verify, document, explain |
+| 08 | `drills/08-full-linux-operations-capstone/` | Full Linux operations SRE capstone | service ownership, SLIs, SLOs, monitoring, alerting, incident response, postmortem, runbook, toil reduction, Bash automation, dual-distro recovery |
+
+### Drill 08 SRE Standard
+
+Drill 08 must be SRE-relevant.
+
+It should simulate operating a small Linux-backed service and proving reliability through:
+
+* service overview
+* SLI definitions
+* SLO target
+* monitoring checks
+* alert candidates
+* incident timeline
+* root cause analysis
+* recovery evidence
+* post-reboot verification
+* blameless postmortem
+* runbook
+* toil-reduction note
+* Bash automation evidence
+* Debian/Ubuntu evidence
+* RHEL-family evidence
+* RHEL vs Ubuntu comparison
 
 ### Expected Difficulty
 
 The drills should be harder than the chapter labs.
 
 They should require recall across chapters rather than giving a direct sequence of commands.
+
+Drill 08 should require SRE-style thinking, not only Linux command execution.
 
 ### Documentation Rule
 
