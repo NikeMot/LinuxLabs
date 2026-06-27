@@ -4,19 +4,35 @@
 
 The LinuxLabs repository contains my hands-on Linux system administration labs aimed at developing practical Linux, infrastructure, SRE operations, and AI-assisted operations skills.
 
-The canonical LinuxLabs programme is now a **15-lab chapter-led series** based on *Practical Linux System Administration* by Kenneth Hess. Each lab maps to one chapter of that book and expands it with material from the other Linux and operating systems books in my Drive.
+The canonical LinuxLabs programme is a **15-lab chapter-led series** based on *Practical Linux System Administration* by Kenneth Hess. Each lab maps to one chapter of that book and expands it with material from the other Linux and operating systems books in my Drive.
+
+After the 15 chapter-led labs, LinuxLabs continues with an **8-lab drill series**. The drill series is designed to force recall, integration, troubleshooting, and production-style execution across everything learned in the first 15 labs.
 
 The goal is not just to learn commands, but to build production-style operational judgement: build, verify, troubleshoot, document, recover, compare distributions, use AI responsibly, and explain decisions.
 
 ### Core Rule
 
-One chapter equals one lab.
+Main series:
 
 ```text
 15 chapters = 15 labs
 ```
 
+Drill series:
+
+```text
+8 integration drills
+```
+
+Total programme:
+
+```text
+23 labs total
+```
+
 By the end of Lab 15, the LinuxLabs series should have covered the practical administration content from *Practical Linux System Administration* and the relevant supporting concepts from the other Linux, operating systems, cloud administration, and system administration books.
+
+By the end of Drill 08, the learner should be able to combine those skills under realistic operational pressure.
 
 ### Primary Reference
 
@@ -50,15 +66,34 @@ By the end of Lab 15, the LinuxLabs series should have covered the practical adm
 | 14 | `14-continuing-your-education/` | Continuing Your Education | Not started |
 | 15 | `15-making-career-moves/` | Making Career Moves | Not started |
 
+### Drill Series
+
+| Drill | Folder | Purpose | Status |
+| --- | --- | --- | --- |
+| 01 | `drills/01-baseline-and-access-rebuild/` | Rebuild baseline access, shell, users, sudo, SSH, and documentation from memory | Not started |
+| 02 | `drills/02-network-and-service-recovery/` | Recover a broken networked service using DNS, routing, firewall, service, and log evidence | Not started |
+| 03 | `drills/03-storage-pressure-and-restore/` | Diagnose storage pressure, repair mounts, extend capacity, and prove restore readiness | Not started |
+| 04 | `drills/04-permissions-identity-and-samba/` | Repair user, group, permission, and Samba access issues across Linux and client workflows | Not started |
+| 05 | `drills/05-patching-software-and-rollback/` | Handle package changes, update risk, broken dependencies, and rollback decisions | Not started |
+| 06 | `drills/06-monitoring-performance-and-capacity/` | Investigate CPU, memory, disk, process, and I/O pressure with monitoring evidence | Not started |
+| 07 | `drills/07-security-hardening-and-incident-response/` | Harden a host, investigate suspicious activity, and document response actions | Not started |
+| 08 | `drills/08-full-linux-operations-capstone/` | Operate, break, recover, document, and explain a small Linux estate end to end | Not started |
+
 ### Naming Convention
 
-Topic folders use this format:
+Chapter folders use this format:
 
 ```text
 01-topic-name-written-lowercase
 ```
 
-Lab files inside topic folders use this format:
+Drill folders use this format:
+
+```text
+drills/01-drill-name-written-lowercase
+```
+
+Lab files inside folders use this format:
 
 ```text
 lab-01-short-lab-title.md
@@ -68,6 +103,12 @@ Example:
 
 ```text
 01-getting-started-with-linux/lab-01-bootstrap-and-baseline-linux-server.md
+```
+
+Drill example:
+
+```text
+drills/01-baseline-and-access-rebuild/lab-drill-01-baseline-and-access-rebuild.md
 ```
 
 ### How to Use This Repository
@@ -127,4 +168,4 @@ Use AI for explanation, planning, command review, log summaries, runbook drafts,
 
 ### Lab Upload Rule
 
-Every new Linux lab must be committed to the correct numbered chapter folder. Labs should not be placed at the repository root.
+Every new Linux lab must be committed to the correct numbered chapter folder or drill folder. Labs should not be placed at the repository root.
