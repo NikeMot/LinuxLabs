@@ -10,6 +10,8 @@ After the 15 chapter-led labs, LinuxLabs continues with an **8-lab drill series*
 
 Bash and shell skill are taught throughout the whole programme. Bash is the primary shell. POSIX shell and KornShell awareness are included where relevant for enterprise UNIX/Linux environments.
 
+Every applicable lab must be completed on both a Debian-family system, normally Ubuntu Server LTS, and a RHEL-family system. Differences between the two must be documented as part of the final lab evidence.
+
 The goal is not just to learn commands, but to build production-style operational judgement: build, verify, troubleshoot, document, recover, compare distributions, script safely, use AI responsibly, and explain decisions.
 
 ### Core Rule
@@ -34,7 +36,18 @@ Total programme:
 
 By the end of Lab 15, the LinuxLabs series should have covered the practical administration content from *Practical Linux System Administration* and the relevant supporting concepts from the other Linux, operating systems, cloud administration, and system administration books.
 
-By the end of Drill 08, the learner should be able to combine those skills under realistic operational pressure.
+By the end of Drill 08, the learner should be able to combine those skills under realistic operational pressure on both Debian-family and RHEL-family systems.
+
+### Distribution Standard
+
+The default target systems are:
+
+| Family | Default lab target | Purpose |
+| --- | --- | --- |
+| Debian-family | Ubuntu Server LTS | Debian/Ubuntu administration, `apt`, Netplan, AppArmor, Debian-style paths and logs |
+| RHEL-family | RHEL, Rocky Linux, AlmaLinux, or CentOS Stream | Red Hat-style administration, `dnf`, firewalld, SELinux, XFS/LVM conventions, RHCSA-style skills |
+
+A lab is not complete until the relevant work has been attempted, verified, and documented on both families, unless the lab explicitly states that one family is out of scope and explains why.
 
 ### Primary Reference
 
@@ -140,7 +153,9 @@ Each lab should include:
 * Files created or changed
 * Verification evidence
 * Bash or shell usage notes
-* RHEL vs Ubuntu comparison, where relevant
+* Debian/Ubuntu implementation evidence
+* RHEL-family implementation evidence
+* RHEL vs Ubuntu comparison
 * Break/fix scenario
 * Post-reboot verification
 * AI-assisted operations notes, where relevant
