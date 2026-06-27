@@ -26,6 +26,28 @@ Part 1 uses the current full chapter as the main learning unit.
 
 Part 2 repeats and combines all topics learned in earlier labs.
 
+### Break/Fix Rule
+
+Break/fix is mandatory in every lab.
+
+```text
+No break/fix = lab not complete.
+```
+
+Every lab must include a controlled failure, evidence-led diagnosis, safe repair, recovery verification, and a prevention note.
+
+Minimum standard:
+
+```text
+At least one controlled break/fix scenario per lab.
+```
+
+Preferred standard from Lab 05 onward:
+
+```text
+One break/fix scenario in Part 1 and one break/fix scenario in Part 2.
+```
+
 ### Distribution Rule
 
 Every applicable lab must be completed on both:
@@ -101,6 +123,11 @@ Each lab must include:
 * a realistic scenario or ticket
 * Part 1 new chapter content
 * Part 2 cumulative repetition
+* mandatory controlled break/fix practice
+* baseline state before failure
+* symptoms and diagnosis evidence
+* repair and recovery evidence
+* prevention note
 * requirements and constraints
 * implementation tasks
 * Debian/Ubuntu implementation evidence
@@ -108,7 +135,6 @@ Each lab must include:
 * RHEL vs Ubuntu comparison
 * verification evidence
 * post-reboot verification where applicable
-* break/fix or troubleshooting element where applicable
 * AI-assisted operations notes where relevant
 * seven reflection answers
 * final documentation uploaded to the correct folder
