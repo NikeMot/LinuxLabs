@@ -8,7 +8,9 @@ The canonical LinuxLabs programme is a **15-lab chapter-led series** based on *P
 
 After the 15 chapter-led labs, LinuxLabs continues with an **8-lab drill series**. The drill series is designed to force recall, integration, troubleshooting, and production-style execution across everything learned in the first 15 labs.
 
-The goal is not just to learn commands, but to build production-style operational judgement: build, verify, troubleshoot, document, recover, compare distributions, use AI responsibly, and explain decisions.
+Bash and shell skill are taught throughout the whole programme. Bash is the primary shell. POSIX shell and KornShell awareness are included where relevant for enterprise UNIX/Linux environments.
+
+The goal is not just to learn commands, but to build production-style operational judgement: build, verify, troubleshoot, document, recover, compare distributions, script safely, use AI responsibly, and explain decisions.
 
 ### Core Rule
 
@@ -44,6 +46,8 @@ By the end of Drill 08, the learner should be able to combine those skills under
 | Command-line depth | The Linux Command Line |
 | Modern Linux depth | Learning Modern Linux |
 | Operating system theory | Modern Operating Systems / Operating System Concepts |
+| Bash and shell progression | Bash, POSIX shell, and KornShell awareness |
+| Role-readiness target | DXC Linux System Administrator readiness map |
 | AI support | Responsible AI-assisted operations notes and verified system evidence |
 
 ### Lab Series
@@ -78,6 +82,17 @@ By the end of Drill 08, the learner should be able to combine those skills under
 | 06 | `drills/06-monitoring-performance-and-capacity/` | Investigate CPU, memory, disk, process, and I/O pressure with monitoring evidence | Not started |
 | 07 | `drills/07-security-hardening-and-incident-response/` | Harden a host, investigate suspicious activity, and document response actions | Not started |
 | 08 | `drills/08-full-linux-operations-capstone/` | Operate, break, recover, document, and explain a small Linux estate end to end | Not started |
+
+### Supporting Standards
+
+| Document | Purpose |
+| --- | --- |
+| `docs/lab-series-map.md` | Maps the 15 chapter-led labs |
+| `docs/drill-series-map.md` | Maps the 8 integration drills |
+| `docs/bash-and-shell-progression.md` | Defines how Bash and shell skills progress across all labs |
+| `docs/dxc-linux-admin-readiness-map.md` | Maps LinuxLabs to the DXC Linux System Administrator role |
+| `docs/learner-workflow.md` | Defines the solve-first, document-after workflow |
+| `docs/lab-output-template.md` | Defines the final lab documentation format |
 
 ### Naming Convention
 
@@ -124,6 +139,7 @@ Each lab should include:
 * Key commands used
 * Files created or changed
 * Verification evidence
+* Bash or shell usage notes
 * RHEL vs Ubuntu comparison, where relevant
 * Break/fix scenario
 * Post-reboot verification
