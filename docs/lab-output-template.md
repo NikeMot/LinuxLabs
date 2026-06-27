@@ -11,6 +11,12 @@ Every chapter lab has two parts:
 1. **Part 1 — New Chapter Content**
 2. **Part 2 — Cumulative Repetition of All Previous Topics**
 
+Every lab must include controlled break/fix practice.
+
+```text
+No break/fix = lab not complete.
+```
+
 When a book chapter is used as a reference, use the full chapter as the reference unit, not isolated extracts.
 
 ---
@@ -32,6 +38,8 @@ When a book chapter is used as a reference, use the full chapter as the referenc
 **Debian/Ubuntu status:** Not started / In progress / Completed / Out of scope
 
 **RHEL-family status:** Not started / In progress / Completed / Out of scope
+
+**Break/fix status:** Not started / In progress / Completed / Blocked
 
 ### Objective
 
@@ -85,6 +93,8 @@ Examples:
 * Do not mark the lab complete without post-reboot verification.
 * Do not treat AI output as proof without local verification.
 * Do not mark a lab complete if only one distribution family has been attempted, unless the other is explicitly out of scope with a reason.
+* Do not mark a lab complete without controlled break/fix practice.
+* Do not perform break/fix on employer, production, shared, or sensitive systems.
 * Do not use isolated book extracts as the lab reference when a full chapter is available.
 
 ---
@@ -100,6 +110,7 @@ Examples:
 * The work must survive a reboot.
 * Documentation should be good enough for another engineer to follow.
 * Part 2 repeats all topics previously learned in the series.
+* Break/fix work is performed only after a baseline state or snapshot exists.
 
 ---
 
@@ -126,7 +137,7 @@ Example:
 | Debian/Ubuntu evidence | Proves the work succeeded on Ubuntu or another Debian-family system |
 | RHEL-family evidence | Proves the work succeeded on RHEL, Rocky, AlmaLinux, or CentOS Stream |
 | RHEL vs Ubuntu notes | Captures distribution differences |
-| Break/fix notes | Records troubleshooting and recovery |
+| Break/fix evidence | Proves baseline, failure, diagnosis, fix, recovery, and prevention |
 | AI-assisted operations notes | Records where AI helped and what was verified independently |
 | Runbook notes | Captures repeatable operational procedure |
 
@@ -143,6 +154,14 @@ Part 1 focuses on the current full chapter.
 | Task 1 | | | |
 | Task 2 | | | |
 | Task 3 | | | |
+
+### Part 1 Break/Fix
+
+Where practical, include a controlled failure related to the new chapter content.
+
+| Failure | Debian/Ubuntu task | RHEL-family task | Recovery evidence |
+| --- | --- | --- | --- |
+| | | | |
 
 ### Part 1 Evidence
 
@@ -182,6 +201,14 @@ For Lab 02 onward, include practical repetition from every earlier lab.
 
 Remove rows that are not yet applicable.
 
+### Part 2 Break/Fix
+
+From Lab 05 onward, Part 2 should include its own cumulative break/fix scenario where practical.
+
+| Failure | Previous topics involved | Debian/Ubuntu task | RHEL-family task | Recovery evidence |
+| --- | --- | --- | --- | --- |
+| | | | | |
+
 ### Part 2 Evidence
 
 | Check | Debian/Ubuntu evidence | RHEL-family evidence | Result |
@@ -197,8 +224,8 @@ Record important commands only.
 
 | Command | Part | Debian/Ubuntu purpose | RHEL-family purpose |
 | --- | --- | --- | --- |
-| | Part 1 / Part 2 | | |
-| | Part 1 / Part 2 | | |
+| | Part 1 / Part 2 / Break-Fix | | |
+| | Part 1 / Part 2 / Break-Fix | | |
 
 ---
 
@@ -206,8 +233,8 @@ Record important commands only.
 
 | Path | Part | Debian/Ubuntu | RHEL-family | Purpose |
 | --- | --- | --- | --- | --- |
-| | Part 1 / Part 2 | | | |
-| | Part 1 / Part 2 | | | |
+| | Part 1 / Part 2 / Break-Fix | | | |
+| | Part 1 / Part 2 / Break-Fix | | | |
 
 ---
 
@@ -217,8 +244,8 @@ This section proves the lab worked on Ubuntu or another Debian-family system.
 
 | Check | Part | Evidence | Result |
 | --- | --- | --- | --- |
-| | Part 1 / Part 2 | | Passed / Failed |
-| | Part 1 / Part 2 | | Passed / Failed |
+| | Part 1 / Part 2 / Break-Fix | | Passed / Failed |
+| | Part 1 / Part 2 / Break-Fix | | Passed / Failed |
 
 ---
 
@@ -228,8 +255,8 @@ This section proves the lab worked on RHEL, Rocky Linux, AlmaLinux, or CentOS St
 
 | Check | Part | Evidence | Result |
 | --- | --- | --- | --- |
-| | Part 1 / Part 2 | | Passed / Failed |
-| | Part 1 / Part 2 | | Passed / Failed |
+| | Part 1 / Part 2 / Break-Fix | | Passed / Failed |
+| | Part 1 / Part 2 / Break-Fix | | Passed / Failed |
 
 ---
 
@@ -245,16 +272,45 @@ This section proves the lab worked on RHEL, Rocky Linux, AlmaLinux, or CentOS St
 | Config paths | | | |
 | Filesystems/storage | | | |
 | Shell/user environment | | | |
+| Break/fix diagnosis | | | |
 
 ---
 
-## 16. Break/Fix Scenario
+## 16. Mandatory Break/Fix Scenario
 
-Describe what was deliberately broken or what failure was simulated.
+No lab is complete without this section.
+
+Minimum requirement:
+
+```text
+At least one controlled break/fix scenario per lab.
+```
+
+Preferred from Lab 05 onward:
+
+```text
+One break/fix scenario in Part 1 and one break/fix scenario in Part 2.
+```
+
+### Break/Fix Evidence
+
+| Stage | Evidence |
+| --- | --- |
+| Baseline | |
+| Controlled failure introduced or encountered | |
+| Symptoms observed | |
+| Diagnostic commands used | |
+| Likely or confirmed cause | |
+| Fix applied | |
+| Recovery evidence | |
+| Post-reboot evidence where relevant | |
+| Prevention note | |
+
+### Break/Fix Summary
 
 | Failure | Part | Family affected | Cause | Diagnosis | Fix | Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| | Part 1 / Part 2 | | | | | |
+| | Part 1 / Part 2 | Debian/Ubuntu / RHEL-family / Both | | | | |
 
 ---
 
@@ -264,9 +320,9 @@ Nothing counts unless it survives reboot.
 
 | Check | Part | Debian/Ubuntu evidence | RHEL-family evidence | Result |
 | --- | --- | --- | --- | --- |
-| Service/state persisted after reboot | Part 1 / Part 2 | | | Passed / Failed |
-| Network/storage/security configuration persisted after reboot | Part 1 / Part 2 | | | Passed / Failed |
-| Documentation updated after final verification | Part 1 / Part 2 | | | Passed / Failed |
+| Service/state persisted after reboot | Part 1 / Part 2 / Break-Fix | | | Passed / Failed |
+| Network/storage/security configuration persisted after reboot | Part 1 / Part 2 / Break-Fix | | | Passed / Failed |
+| Documentation updated after final verification | Part 1 / Part 2 / Break-Fix | | | Passed / Failed |
 
 ---
 
@@ -276,7 +332,7 @@ Use this section when AI was used during the lab.
 
 | AI use | Part | What it helped with | What was independently verified | Evidence |
 | --- | --- | --- | --- | --- |
-| | Part 1 / Part 2 | | | |
+| | Part 1 / Part 2 / Break-Fix | | | |
 
 If AI was not used, write:
 
@@ -298,7 +354,7 @@ If no diagram is required, write:
 
 | Issue | Part | Family affected | Cause | Fix |
 | --- | --- | --- | --- | --- |
-| | Part 1 / Part 2 | | | |
+| | Part 1 / Part 2 / Break-Fix | | | |
 
 If there were no issues, write:
 
@@ -310,8 +366,8 @@ If there were no issues, write:
 
 | Decision | Part | Reason |
 | --- | --- | --- |
-| | Part 1 / Part 2 | |
-| | Part 1 / Part 2 | |
+| | Part 1 / Part 2 / Break-Fix | |
+| | Part 1 / Part 2 / Break-Fix | |
 
 ---
 
@@ -333,12 +389,13 @@ Cover where relevant:
 * distro differences
 * responsible AI usage
 * cumulative repetition and skill retention
+* what would prevent the break/fix issue recurring in production
 
 ---
 
 ## 23. Final Outcome
 
-State clearly whether Part 1 and Part 2 were completed on both Debian/Ubuntu and RHEL-family systems.
+State clearly whether Part 1, Part 2, and the mandatory break/fix scenario were completed on both Debian/Ubuntu and RHEL-family systems.
 
 ---
 
@@ -374,7 +431,13 @@ Summarise production improvements from the learner's reflection answers.
 * [ ] Debian/Ubuntu verification evidence captured
 * [ ] RHEL-family verification evidence captured
 * [ ] RHEL vs Ubuntu comparison completed
-* [ ] Break/fix scenario completed
+* [ ] Mandatory break/fix scenario completed
+* [ ] Break/fix baseline captured
+* [ ] Break/fix symptoms captured
+* [ ] Break/fix diagnosis captured
+* [ ] Break/fix fix captured
+* [ ] Break/fix recovery evidence captured
+* [ ] Break/fix prevention note captured
 * [ ] Post-reboot verification completed for both applicable families
 * [ ] AI-assisted operations notes completed or marked not used
 * [ ] Issues documented
@@ -394,8 +457,8 @@ Ask exactly seven reflection questions at the end of the lab.
 
 1. What problem did this lab simulate?
 2. What new chapter content did you practise, and what previous topics did Part 2 force you to repeat?
-3. What commands, files, or services mattered most in solving it on Debian/Ubuntu and RHEL-family systems?
-4. What evidence proves your solution worked on both families?
-5. What broke, confused you, or required troubleshooting?
+3. What did you deliberately break or diagnose, and what evidence led you to the fix?
+4. What commands, files, or services mattered most in solving it on Debian/Ubuntu and RHEL-family systems?
+5. What evidence proves your solution worked on both families?
 6. Where did AI help, if at all, and what did you verify yourself?
 7. What would you improve, automate, or monitor next time?
