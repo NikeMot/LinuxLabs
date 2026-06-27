@@ -4,6 +4,8 @@ Use this template for every LinuxLabs lab. Keep it evidence-based, operational, 
 
 The learner should focus on solving the lab. Documentation, formatting, evidence organisation, and GitHub upload are handled after the learner provides command output, observations, issues encountered, and answers to the seven reflection questions.
 
+Every applicable lab must be attempted on both a Debian-family system, normally Ubuntu Server LTS, and a RHEL-family system. A lab is not complete until both implementations have evidence, unless one family is explicitly marked out of scope with a reason.
+
 ---
 
 # Lab Title
@@ -19,6 +21,10 @@ The learner should focus on solving the lab. Documentation, formatting, evidence
 **Difficulty:**
 
 **Status:** Not started / In progress / Completed / Blocked
+
+**Debian/Ubuntu status:** Not started / In progress / Completed / Out of scope
+
+**RHEL-family status:** Not started / In progress / Completed / Out of scope
 
 ### Objective
 
@@ -52,11 +58,11 @@ The scenario should read like a ticket or operational request, not just a tutori
 
 ## 4. Requirements
 
-| ID | Requirement | Status |
-| --- | --- | --- |
-| R1 | | Not started |
-| R2 | | Not started |
-| R3 | | Not started |
+| ID | Requirement | Debian/Ubuntu status | RHEL-family status |
+| --- | --- | --- | --- |
+| R1 | | Not started | Not started |
+| R2 | | Not started | Not started |
+| R3 | | Not started | Not started |
 
 ---
 
@@ -71,6 +77,7 @@ Examples:
 * Do not rely on commands that cannot be explained.
 * Do not mark the lab complete without post-reboot verification.
 * Do not treat AI output as proof without local verification.
+* Do not mark a lab complete if only one distribution family has been attempted, unless the other is explicitly out of scope with a reason.
 
 ---
 
@@ -80,7 +87,7 @@ Record assumptions here.
 
 Examples:
 
-* The lab is performed on both RHEL and Ubuntu unless stated otherwise.
+* The lab is performed on both Debian/Ubuntu and RHEL-family systems unless stated otherwise.
 * The systems are disposable lab machines.
 * The work must survive a reboot.
 * Documentation should be good enough for another engineer to follow.
@@ -94,8 +101,8 @@ Use a structure appropriate for the lab.
 Example:
 
 ```text
-01-linux-foundations/
-└── lab-01-build-and-baseline-linux-servers.md
+01-getting-started-with-linux/
+└── lab-01-bootstrap-and-baseline-linux-server.md
 ```
 
 ---
@@ -105,7 +112,8 @@ Example:
 | Deliverable | Purpose |
 | --- | --- |
 | Lab write-up | Records requirements, implementation, evidence, and reflection |
-| Verification evidence | Proves the work succeeded |
+| Debian/Ubuntu evidence | Proves the work succeeded on Ubuntu or another Debian-family system |
+| RHEL-family evidence | Proves the work succeeded on RHEL, Rocky, AlmaLinux, or CentOS Stream |
 | RHEL vs Ubuntu notes | Captures distribution differences |
 | Break/fix notes | Records troubleshooting and recovery |
 | AI-assisted operations notes | Records where AI helped and what was verified independently |
@@ -121,15 +129,15 @@ The learner solves the lab. The final documentation is produced after the learne
 
 ### Task 1 — Task name
 
-Describe what must be done and what must be proven.
+Describe what must be done and what must be proven on both Debian/Ubuntu and RHEL-family systems.
 
 ### Task 2 — Task name
 
-Describe what must be done and what must be proven.
+Describe what must be done and what must be proven on both Debian/Ubuntu and RHEL-family systems.
 
 ### Task 3 — Task name
 
-Describe what must be done and what must be proven.
+Describe what must be done and what must be proven on both Debian/Ubuntu and RHEL-family systems.
 
 ---
 
@@ -137,25 +145,25 @@ Describe what must be done and what must be proven.
 
 Record important commands only.
 
-| Command | Purpose |
-| --- | --- |
-| | |
-| | |
+| Command | Debian/Ubuntu purpose | RHEL-family purpose |
+| --- | --- | --- |
+| | | |
+| | | |
 
 ---
 
 ## 11. Files Created or Changed
 
-| Path | Purpose |
-| --- | --- |
-| | |
-| | |
+| Path | Debian/Ubuntu | RHEL-family | Purpose |
+| --- | --- | --- | --- |
+| | | | |
+| | | | |
 
 ---
 
-## 12. Verification Evidence
+## 12. Debian/Ubuntu Implementation Evidence
 
-This section proves the lab worked.
+This section proves the lab worked on Ubuntu or another Debian-family system.
 
 | Check | Evidence | Result |
 | --- | --- | --- |
@@ -164,9 +172,20 @@ This section proves the lab worked.
 
 ---
 
-## 13. RHEL vs Ubuntu Comparison
+## 13. RHEL-Family Implementation Evidence
 
-| Area | RHEL | Ubuntu | Notes |
+This section proves the lab worked on RHEL, Rocky Linux, AlmaLinux, or CentOS Stream.
+
+| Check | Evidence | Result |
+| --- | --- | --- |
+| | | Passed / Failed |
+| | | Passed / Failed |
+
+---
+
+## 14. RHEL vs Ubuntu Comparison
+
+| Area | RHEL-family | Debian/Ubuntu | Notes |
 | --- | --- | --- | --- |
 | Package management | | | |
 | Service management | | | |
@@ -174,32 +193,34 @@ This section proves the lab worked.
 | Security controls | | | |
 | Logs | | | |
 | Config paths | | | |
+| Filesystems/storage | | | |
+| Shell/user environment | | | |
 
 ---
 
-## 14. Break/Fix Scenario
+## 15. Break/Fix Scenario
 
 Describe what was deliberately broken or what failure was simulated.
 
-| Failure | Cause | Diagnosis | Fix | Evidence |
-| --- | --- | --- | --- | --- |
-| | | | | |
+| Failure | Family affected | Cause | Diagnosis | Fix | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
 
 ---
 
-## 15. Post-Reboot Verification
+## 16. Post-Reboot Verification
 
 Nothing counts unless it survives reboot.
 
-| Check | Evidence | Result |
-| --- | --- | --- |
-| Service/state persisted after reboot | | Passed / Failed |
-| Network/storage/security configuration persisted after reboot | | Passed / Failed |
-| Documentation updated after final verification | | Passed / Failed |
+| Check | Debian/Ubuntu evidence | RHEL-family evidence | Result |
+| --- | --- | --- | --- |
+| Service/state persisted after reboot | | | Passed / Failed |
+| Network/storage/security configuration persisted after reboot | | | Passed / Failed |
+| Documentation updated after final verification | | | Passed / Failed |
 
 ---
 
-## 16. AI-Assisted Operations Notes
+## 17. AI-Assisted Operations Notes
 
 Use this section when AI was used during the lab.
 
@@ -213,7 +234,7 @@ If AI was not used, write:
 
 ---
 
-## 17. Diagram
+## 18. Diagram
 
 Add a diagram if useful.
 
@@ -221,24 +242,13 @@ If no diagram is required, write:
 
 > No diagram required for this lab.
 
-Example:
-
-```mermaid
-flowchart LR
-    A[Requirement] --> B[Implementation]
-    B --> C[Verification]
-    C --> D[Break/Fix]
-    D --> E[Post-Reboot Verification]
-    E --> F[Documentation]
-```
-
 ---
 
-## 18. Issues Encountered
+## 19. Issues Encountered
 
-| Issue | Cause | Fix |
-| --- | --- | --- |
-| | | |
+| Issue | Family affected | Cause | Fix |
+| --- | --- | --- | --- |
+| | | | |
 
 If there were no issues, write:
 
@@ -246,7 +256,7 @@ If there were no issues, write:
 
 ---
 
-## 19. Decisions Made
+## 20. Decisions Made
 
 | Decision | Reason |
 | --- | --- |
@@ -255,7 +265,7 @@ If there were no issues, write:
 
 ---
 
-## 20. Security and Production Considerations
+## 21. Security and Production Considerations
 
 Explain the production relevance of the lab.
 
@@ -270,29 +280,30 @@ Cover where relevant:
 * monitoring
 * operational risk
 * documentation quality
+* distro differences
 * responsible AI usage
 
 ---
 
-## 21. Final Outcome
+## 22. Final Outcome
 
-State clearly whether the lab was completed.
+State clearly whether the lab was completed on both Debian/Ubuntu and RHEL-family systems.
 
 ---
 
-## 22. What I Learned
+## 23. What I Learned
 
 Summarise the learner's reflection answers into 3–6 bullet points.
 
 ---
 
-## 23. What I Would Improve in Production
+## 24. What I Would Improve in Production
 
 Summarise production improvements from the learner's reflection answers.
 
 ---
 
-## 24. References Used
+## 25. References Used
 
 | Reference | Used for |
 | --- | --- |
@@ -301,15 +312,16 @@ Summarise production improvements from the learner's reflection answers.
 
 ---
 
-## 25. Completion Checklist
+## 26. Completion Checklist
 
 * [ ] Requirements understood
-* [ ] RHEL implementation completed or explicitly marked out of scope
-* [ ] Ubuntu implementation completed or explicitly marked out of scope
-* [ ] Verification evidence captured
+* [ ] Debian/Ubuntu implementation completed or explicitly marked out of scope with a reason
+* [ ] RHEL-family implementation completed or explicitly marked out of scope with a reason
+* [ ] Debian/Ubuntu verification evidence captured
+* [ ] RHEL-family verification evidence captured
 * [ ] RHEL vs Ubuntu comparison completed
 * [ ] Break/fix scenario completed
-* [ ] Post-reboot verification completed
+* [ ] Post-reboot verification completed for both applicable families
 * [ ] AI-assisted operations notes completed or marked not used
 * [ ] Issues documented
 * [ ] Decisions documented
@@ -322,13 +334,13 @@ Summarise production improvements from the learner's reflection answers.
 
 ---
 
-## 26. Reflection Questions
+## 27. Reflection Questions
 
 Ask exactly seven reflection questions at the end of the lab.
 
 1. What problem did this lab simulate?
-2. What commands, files, or services mattered most in solving it?
-3. What evidence proves your solution worked?
+2. What commands, files, or services mattered most in solving it on Debian/Ubuntu and RHEL-family systems?
+3. What evidence proves your solution worked on both families?
 4. What broke, confused you, or required troubleshooting?
 5. What would be risky about doing this in production?
 6. Where did AI help, if at all, and what did you verify yourself?
