@@ -105,7 +105,7 @@ The learner should be able to combine:
 
 **Pass standard:** complete mixed incidents without a command-by-command walkthrough.
 
-### Gate 6 — Final DXC-Style Readiness
+### Gate 6 — Final SRE-Style Linux Operations Readiness
 
 **Timing:** after Drill 08.
 
@@ -120,10 +120,16 @@ The learner should be able to:
 * document actions clearly
 * work to ITIL-style process discipline
 * handle both Ubuntu and RHEL-family systems
-* identify risks and root causes
-* explain next improvements
+* define simple SLIs and SLOs for a Linux-backed service
+* collect service health and saturation evidence
+* identify alert candidates
+* restore service after a simulated reliability incident
+* produce a blameless postmortem
+* write a recovery runbook
+* identify toil and propose automation
+* explain reliability risks and next improvements
 
-**Pass standard:** complete the final capstone with minimal prompting, capture useful evidence, explain decisions, and document the outcome clearly enough for another engineer to continue support.
+**Pass standard:** complete the final SRE-style capstone with minimal prompting, restore the service on both distribution families, capture useful reliability evidence, explain decisions, produce a runbook and postmortem, and document the outcome clearly enough for another engineer to continue support.
 
 ### Scoring Model
 
