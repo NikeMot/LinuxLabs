@@ -15,6 +15,8 @@ After the 15 chapter-led labs, LinuxLabs continues with an **8-lab drill series*
 
 The final drill is an **SRE-style Linux operations capstone**. It must test service ownership, SLIs, SLOs, monitoring, alerting, incident response, postmortem writing, runbook quality, toil reduction, Bash automation, and recovery on both Debian-family and RHEL-family systems.
 
+Controlled break/fix practice is the most important practical mechanism in LinuxLabs. Every lab and drill should include a controlled failure, evidence-led diagnosis, safe repair, verification, and prevention note.
+
 Bash and shell skill are taught throughout the whole programme. Bash is the primary shell. POSIX shell and KornShell awareness are included where relevant for enterprise UNIX/Linux environments.
 
 Every applicable lab must be completed on both a Debian-family system, normally Ubuntu Server LTS, and a RHEL-family system. Differences between the two must be documented as part of the final lab evidence.
@@ -34,6 +36,7 @@ Every chapter lab:
 ```text
 Part 1 = new full-chapter content
 Part 2 = cumulative repetition of all previous topics
+Controlled break/fix = mandatory
 ```
 
 Drill series:
@@ -72,6 +75,18 @@ Example:
 Lab 05 Part 1 = networking
 Lab 05 Part 2 = baseline, CLI, sudo, permissions, shell environment, users and groups
 ```
+
+### Break/Fix Rule
+
+Every lab and drill must include controlled break/fix practice.
+
+The required pattern is:
+
+```text
+baseline -> break -> observe -> diagnose -> fix -> verify -> reboot test where relevant -> document -> improve
+```
+
+Break/fix work must be performed only on disposable lab systems, with snapshots or checkpoints where appropriate.
 
 ### Distribution Standard
 
@@ -139,6 +154,7 @@ A lab is not complete until the relevant work has been attempted, verified, and 
 | `docs/lab-series-map.md` | Maps the 15 chapter-led labs |
 | `docs/drill-series-map.md` | Maps the 8 integration drills |
 | `docs/cumulative-repetition-standard.md` | Defines the two-part lab structure and cumulative review rule |
+| `docs/break-fix-standard.md` | Defines mandatory controlled failure, diagnosis, repair, verification, and prevention practice |
 | `docs/environment-standard.md` | Defines hosts, snapshots, baseline packages, and evidence rules |
 | `docs/debian-rhel-comparison-matrix.md` | Tracks recurring Debian/Ubuntu vs RHEL-family differences |
 | `docs/bash-and-shell-progression.md` | Defines how Bash and shell skills progress across all labs |
@@ -190,6 +206,7 @@ Each chapter lab should include:
 
 * Part 1 — New Chapter Content
 * Part 2 — Cumulative Repetition of All Previous Topics
+* Controlled break/fix scenario
 * Scenario
 * Reference material using full chapters where books are used
 * Requirements
