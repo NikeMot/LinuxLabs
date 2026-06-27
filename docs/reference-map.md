@@ -20,6 +20,23 @@ The canonical structure follows the 15 chapters of *Practical Linux System Admin
 | Ubuntu documentation | Ubuntu-specific implementation and administration guidance |
 | AI-assisted operations notes | Prompting, command review, log summaries, runbook drafts, comparison notes, and safety checks |
 
+### Full-Chapter Reference Rule
+
+When a LinuxLabs lab references a book chapter, the whole chapter should be treated as the reference unit.
+
+Do not cherry-pick isolated paragraphs or tiny fragments as the basis of a lab.
+
+Use the full chapter to understand:
+
+* the main topic
+* supporting concepts
+* related commands
+* warnings and limitations
+* operational context
+* chapter summary or conclusions
+
+The final lab must still be original work. Do not copy book text into the repository.
+
 ### Coverage Rule
 
 By the end of Lab 15, the series must cover the practical administration content from *Practical Linux System Administration* and the relevant supporting concepts from the other Linux and operating systems references.
@@ -44,11 +61,24 @@ By the end of Lab 15, the series must cover the practical administration content
 | 14. Continuing Your Education | Lab 14 |
 | 15. Making Career Moves | Lab 15 |
 
+### Supporting Standards
+
+| Standard | Purpose |
+| --- | --- |
+| `docs/environment-standard.md` | Defines hosts, snapshots, baseline tools, and evidence rules |
+| `docs/debian-rhel-comparison-matrix.md` | Tracks recurring Ubuntu vs RHEL-family differences |
+| `docs/bash-and-shell-progression.md` | Defines Bash and shell progression across all labs |
+| `docs/itil-operations-templates.md` | Provides incident, problem, change, rollback, RCA, and restoration templates |
+| `docs/assessment-gates.md` | Defines pass/fail readiness gates |
+| `docs/network-filesharing-protocols.md` | Makes NFS, SSH/SFTP, FTP awareness, and Samba coverage explicit |
+| `docs/ansible-mini-layer.md` | Adds a lightweight Ansible layer after Bash foundations |
+| `scripts/README.md` | Defines the Bash script portfolio structure |
+
 ### Distribution Rule
 
-Labs should normally compare **RHEL** and **Ubuntu**.
+Labs should compare **Debian/Ubuntu** and **RHEL-family** systems.
 
-If a lab cannot reasonably be completed on both distributions, the lab must explain why and record the limitation.
+A lab is incomplete if only one family is attempted, unless the lab explicitly marks the other family out of scope and explains why.
 
 ### AI Usage Rule
 
@@ -60,4 +90,4 @@ AI output should not be treated as evidence. Every important result must be veri
 
 Do not copy book material into the repository.
 
-Use references to understand the task, then write original notes, evidence, and reflections.
+Use full chapters to understand the task, then write original notes, evidence, and reflections.
