@@ -4,14 +4,14 @@
 
 Break/fix is the most important practical skill in LinuxLabs.
 
-Every lab and drill should include a controlled failure, evidence-led diagnosis, safe repair, and verification.
+Every lab and drill must include a controlled failure, evidence-led diagnosis, safe repair, and verification.
 
-The goal is to build operational confidence: when something fails, the learner can stay calm, gather evidence, form a hypothesis, fix safely, and prove recovery.
+The goal is to build operational confidence: when something fails, the learner can stay calm, gather evidence, form a hypothesis, fix safely, prove recovery, and explain how to prevent recurrence.
 
 ### Core Rule
 
 ```text
-Every lab must include controlled break/fix practice.
+No break/fix = lab not complete.
 ```
 
 A lab is not complete until the learner has:
@@ -24,6 +24,28 @@ A lab is not complete until the learner has:
 * verified the repair
 * confirmed the fix survives reboot where relevant
 * documented what happened
+* recorded what would prevent recurrence
+
+### Mandatory Scope
+
+Break/fix applies to:
+
+* all 15 chapter-led labs
+* all 8 integration drills
+* both Debian/Ubuntu and RHEL-family systems where applicable
+* Part 1 and Part 2 where practical
+
+Minimum standard:
+
+```text
+At least one controlled break/fix scenario per lab.
+```
+
+Preferred standard from Lab 05 onward:
+
+```text
+One break/fix scenario in Part 1 and one break/fix scenario in Part 2.
+```
 
 ### Safety Rules
 
@@ -43,6 +65,7 @@ Before breaking anything:
 * record the baseline state
 * know how to roll back
 * avoid irreversible destructive changes unless the lab is specifically about restore practice
+* avoid exposing secrets, credentials, or private data
 
 ### Break/Fix Method
 
@@ -53,15 +76,16 @@ Use this sequence:
 3. Observe symptoms
 4. Gather evidence
 5. Form hypothesis
-6. Fix
-7. Verify
-8. Reboot test where relevant
-9. Document
-10. Improve or automate
+6. Test hypothesis
+7. Fix
+8. Verify
+9. Reboot test where relevant
+10. Document
+11. Improve or automate
 
 ### Evidence Required
 
-Each break/fix exercise should capture:
+Each break/fix exercise must capture:
 
 | Stage | Evidence |
 | --- | --- |
@@ -69,6 +93,7 @@ Each break/fix exercise should capture:
 | Break | what was changed or what failure appeared |
 | Symptoms | what stopped working and how it was detected |
 | Diagnosis | commands, logs, status output, config inspection, comparison with baseline |
+| Cause | likely or confirmed root cause |
 | Fix | exact change made to restore service |
 | Verification | proof that the service, user access, storage, network, or security control works again |
 | Persistence | post-reboot proof where relevant |
@@ -91,6 +116,7 @@ Use failures that are realistic for Linux administration:
 | Security controls | AppArmor or SELinux behaviour affecting service access |
 | Automation | Bash script fails due to quoting, path, permission, or missing command |
 | File sharing | Samba or NFS access blocked by permissions, service, or firewall |
+| Documentation | missing evidence, unclear runbook, incomplete rollback note |
 
 ### Distribution Requirement
 
