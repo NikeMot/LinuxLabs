@@ -2,9 +2,11 @@
 
 ### Purpose
 
-Every LinuxLabs lab must be placed in the correct numbered topic folder.
+Every LinuxLabs lab must be placed in the correct numbered chapter folder.
 
-### Topic Folder Naming
+The canonical lab series follows the 15 chapters of *Practical Linux System Administration*.
+
+### Folder Naming
 
 Use this format:
 
@@ -17,7 +19,7 @@ Rules:
 * use two-digit numbering
 * use lowercase words
 * separate words with hyphens
-* keep folders topic-based
+* align the folder with the Practical Linux chapter title
 * do not place labs at the repository root
 
 ### Lab File Naming
@@ -31,27 +33,43 @@ lab-01-short-lab-title.md
 Example:
 
 ```text
-01-linux-foundations/lab-01-build-and-baseline-linux-servers.md
+01-getting-started-with-linux/lab-01-bootstrap-and-baseline-linux-server.md
 ```
 
-### Placement Rules
+### Canonical Placement Rules
 
-| Lab focus | Folder |
-| --- | --- |
-| Linux basics, shell, filesystem, baseline build | `01-linux-foundations/` |
-| Users, groups, sudo, permissions, ACLs | `02-users-groups-and-permissions/` |
-| apt, dnf, repositories, updates | `03-software-management/` |
-| systemd, boot, timers, services | `04-systemd-and-services/` |
-| disks, filesystems, mounts, swap, LVM | `05-storage-and-filesystems/` |
-| IP, routes, DNS, Netplan, NetworkManager | `06-networking/` |
-| SSH hardening, firewalls, SELinux, AppArmor | `07-security-and-hardening/` |
-| journald, logs, incident reconstruction | `08-logging-and-troubleshooting/` |
-| backup, restore, recovery testing | `09-backup-and-recovery/` |
-| CPU, memory, disk, process pressure | `10-performance-and-capacity/` |
-| Bash, Ansible, cloud-init, drift | `11-automation-and-configuration-management/` |
-| capstone and multi-server operations | `12-linux-estate-operations/` |
-| AI-assisted Linux operations | `13-ai-assisted-linux-operations/` |
+| Lab | Folder | Chapter |
+| --- | --- | --- |
+| 01 | `01-getting-started-with-linux/` | Getting Started with Linux |
+| 02 | `02-working-with-permissions-and-privileged-accounts/` | Working with Permissions and Privileged Accounts |
+| 03 | `03-customizing-the-user-experience/` | Customizing the User Experience |
+| 04 | `04-managing-users/` | Managing Users |
+| 05 | `05-connecting-to-a-network/` | Connecting to a Network |
+| 06 | `06-installing-and-uninstalling-software/` | Installing and Uninstalling Software |
+| 07 | `07-managing-storage/` | Managing Storage |
+| 08 | `08-maintaining-system-health/` | Maintaining System Health |
+| 09 | `09-monitoring-your-system/` | Monitoring Your System |
+| 10 | `10-scripting-and-automation/` | Scripting and Automation |
+| 11 | `11-deploying-samba-for-windows-compatibility/` | Deploying Samba for Windows Compatibility |
+| 12 | `12-troubleshooting-linux/` | Troubleshooting Linux |
+| 13 | `13-securing-your-system/` | Securing Your System |
+| 14 | `14-continuing-your-education/` | Continuing Your Education |
+| 15 | `15-making-career-moves/` | Making Career Moves |
 
-If a lab covers several areas, place it in the folder for the primary skill being tested and mention the supporting skills inside the lab.
+### Cross-Cutting Topics
 
-AI may also appear as a supporting section inside another topic lab when it helps with explanation, review, documentation, or troubleshooting.
+Some topics appear across multiple labs rather than as standalone folders:
+
+* AI-assisted operations
+* RHEL vs Ubuntu comparison
+* operational documentation
+* troubleshooting discipline
+* post-reboot verification
+* security and privacy review
+* production readiness
+
+### Upload Rule
+
+Final lab write-ups must be uploaded to the matching chapter folder.
+
+Labs should not be uploaded to the repository root.
