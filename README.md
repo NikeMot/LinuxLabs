@@ -4,7 +4,7 @@
 
 The LinuxLabs repository contains my hands-on Linux system administration labs aimed at developing practical Linux, infrastructure, SRE operations, and AI-assisted operations skills.
 
-The canonical LinuxLabs programme is a **15-lab chapter-led series** based on *Practical Linux System Administration* by Kenneth Hess. Each lab maps to one chapter of that book and expands it with material from the other Linux and operating systems books in my Drive.
+The canonical LinuxLabs programme is a **15-lab chapter-led series** based on *Practical Linux System Administration* by Kenneth Hess. Each lab maps to one full chapter of that book and expands it with material from the other Linux and operating systems books in my Drive.
 
 After the 15 chapter-led labs, LinuxLabs continues with an **8-lab drill series**. The drill series is designed to force recall, integration, troubleshooting, and production-style execution across everything learned in the first 15 labs.
 
@@ -37,6 +37,12 @@ Total programme:
 By the end of Lab 15, the LinuxLabs series should have covered the practical administration content from *Practical Linux System Administration* and the relevant supporting concepts from the other Linux, operating systems, cloud administration, and system administration books.
 
 By the end of Drill 08, the learner should be able to combine those skills under realistic operational pressure on both Debian-family and RHEL-family systems.
+
+### Full-Chapter Reference Rule
+
+When a lab references a book chapter, the whole chapter should be used as the reference unit.
+
+Do not build labs from isolated fragments. Use the full chapter to understand the topic, context, warnings, commands, and operational implications. Final lab write-ups must remain original and must not copy book material.
 
 ### Distribution Standard
 
@@ -102,10 +108,17 @@ A lab is not complete until the relevant work has been attempted, verified, and 
 | --- | --- |
 | `docs/lab-series-map.md` | Maps the 15 chapter-led labs |
 | `docs/drill-series-map.md` | Maps the 8 integration drills |
+| `docs/environment-standard.md` | Defines hosts, snapshots, baseline packages, and evidence rules |
+| `docs/debian-rhel-comparison-matrix.md` | Tracks recurring Debian/Ubuntu vs RHEL-family differences |
 | `docs/bash-and-shell-progression.md` | Defines how Bash and shell skills progress across all labs |
 | `docs/dxc-linux-admin-readiness-map.md` | Maps LinuxLabs to the DXC Linux System Administrator role |
+| `docs/itil-operations-templates.md` | Provides incident, problem, change, rollback, RCA, and restoration templates |
+| `docs/assessment-gates.md` | Defines pass/fail readiness gates |
+| `docs/network-filesharing-protocols.md` | Makes NFS, SSH/SFTP, FTP awareness, and Samba coverage explicit |
+| `docs/ansible-mini-layer.md` | Adds a lightweight Ansible layer after Bash foundations |
 | `docs/learner-workflow.md` | Defines the solve-first, document-after workflow |
 | `docs/lab-output-template.md` | Defines the final lab documentation format |
+| `scripts/README.md` | Defines the Bash script portfolio structure |
 
 ### Naming Convention
 
@@ -159,6 +172,7 @@ Each lab should include:
 * Break/fix scenario
 * Post-reboot verification
 * AI-assisted operations notes, where relevant
+* ITIL-style artefact where relevant
 * Issues encountered
 * Decisions made
 * Security and production considerations
