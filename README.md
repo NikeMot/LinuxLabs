@@ -13,6 +13,8 @@ Every chapter lab has two parts:
 
 After the 15 chapter-led labs, LinuxLabs continues with an **8-lab drill series**. The drill series is designed to force recall, integration, troubleshooting, and production-style execution across everything learned in the first 15 labs.
 
+The final drill is an **SRE-style Linux operations capstone**. It must test service ownership, SLIs, SLOs, monitoring, alerting, incident response, postmortem writing, runbook quality, toil reduction, Bash automation, and recovery on both Debian-family and RHEL-family systems.
+
 Bash and shell skill are taught throughout the whole programme. Bash is the primary shell. POSIX shell and KornShell awareness are included where relevant for enterprise UNIX/Linux environments.
 
 Every applicable lab must be completed on both a Debian-family system, normally Ubuntu Server LTS, and a RHEL-family system. Differences between the two must be documented as part of the final lab evidence.
@@ -48,7 +50,7 @@ Total programme:
 
 By the end of Lab 15, the LinuxLabs series should have covered the practical administration content from *Practical Linux System Administration* and the relevant supporting concepts from the other Linux, operating systems, cloud administration, and system administration books.
 
-By the end of Drill 08, the learner should be able to combine those skills under realistic operational pressure on both Debian-family and RHEL-family systems.
+By the end of Drill 08, the learner should be able to combine those skills under realistic SRE-style operational pressure on both Debian-family and RHEL-family systems.
 
 ### Full-Chapter Reference Rule
 
@@ -94,6 +96,7 @@ A lab is not complete until the relevant work has been attempted, verified, and 
 | Operating system theory | Modern Operating Systems / Operating System Concepts |
 | Bash and shell progression | Bash, POSIX shell, and KornShell awareness |
 | Role-readiness target | DXC Linux System Administrator readiness map |
+| SRE capstone target | SRE capstone standard |
 | AI support | Responsible AI-assisted operations notes and verified system evidence |
 
 ### Lab Series
@@ -127,7 +130,7 @@ A lab is not complete until the relevant work has been attempted, verified, and 
 | 05 | `drills/05-patching-software-and-rollback/` | Handle package changes, update risk, broken dependencies, and rollback decisions | Not started |
 | 06 | `drills/06-monitoring-performance-and-capacity/` | Investigate CPU, memory, disk, process, and I/O pressure with monitoring evidence | Not started |
 | 07 | `drills/07-security-hardening-and-incident-response/` | Harden a host, investigate suspicious activity, and document response actions | Not started |
-| 08 | `drills/08-full-linux-operations-capstone/` | Operate, break, recover, document, and explain a small Linux estate end to end | Not started |
+| 08 | `drills/08-full-linux-operations-capstone/` | SRE-style Linux operations capstone: service ownership, SLIs/SLOs, monitoring, alerting, incident response, postmortem, runbook, toil reduction, and dual-distro recovery | Not started |
 
 ### Supporting Standards
 
@@ -140,6 +143,7 @@ A lab is not complete until the relevant work has been attempted, verified, and 
 | `docs/debian-rhel-comparison-matrix.md` | Tracks recurring Debian/Ubuntu vs RHEL-family differences |
 | `docs/bash-and-shell-progression.md` | Defines how Bash and shell skills progress across all labs |
 | `docs/dxc-linux-admin-readiness-map.md` | Maps LinuxLabs to the DXC Linux System Administrator role |
+| `docs/sre-capstone-standard.md` | Defines the SRE-style final capstone requirements |
 | `docs/itil-operations-templates.md` | Provides incident, problem, change, rollback, RCA, and restoration templates |
 | `docs/assessment-gates.md` | Defines pass/fail readiness gates |
 | `docs/network-filesharing-protocols.md` | Makes NFS, SSH/SFTP, FTP awareness, and Samba coverage explicit |
