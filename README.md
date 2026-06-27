@@ -6,6 +6,11 @@ The LinuxLabs repository contains my hands-on Linux system administration labs a
 
 The canonical LinuxLabs programme is a **15-lab chapter-led series** based on *Practical Linux System Administration* by Kenneth Hess. Each lab maps to one full chapter of that book and expands it with material from the other Linux and operating systems books in my Drive.
 
+Every chapter lab has two parts:
+
+1. **Part 1 — New Chapter Content**
+2. **Part 2 — Cumulative Repetition of All Previous Topics**
+
 After the 15 chapter-led labs, LinuxLabs continues with an **8-lab drill series**. The drill series is designed to force recall, integration, troubleshooting, and production-style execution across everything learned in the first 15 labs.
 
 Bash and shell skill are taught throughout the whole programme. Bash is the primary shell. POSIX shell and KornShell awareness are included where relevant for enterprise UNIX/Linux environments.
@@ -20,6 +25,13 @@ Main series:
 
 ```text
 15 chapters = 15 labs
+```
+
+Every chapter lab:
+
+```text
+Part 1 = new full-chapter content
+Part 2 = cumulative repetition of all previous topics
 ```
 
 Drill series:
@@ -43,6 +55,21 @@ By the end of Drill 08, the learner should be able to combine those skills under
 When a lab references a book chapter, the whole chapter should be used as the reference unit.
 
 Do not build labs from isolated fragments. Use the full chapter to understand the topic, context, warnings, commands, and operational implications. Final lab write-ups must remain original and must not copy book material.
+
+### Cumulative Repetition Rule
+
+Part 1 of each chapter lab introduces the current chapter's new content.
+
+Part 2 of each chapter lab repeats and combines all topics learned in previous labs.
+
+The later the lab, the heavier Part 2 becomes.
+
+Example:
+
+```text
+Lab 05 Part 1 = networking
+Lab 05 Part 2 = baseline, CLI, sudo, permissions, shell environment, users and groups
+```
 
 ### Distribution Standard
 
@@ -108,6 +135,7 @@ A lab is not complete until the relevant work has been attempted, verified, and 
 | --- | --- |
 | `docs/lab-series-map.md` | Maps the 15 chapter-led labs |
 | `docs/drill-series-map.md` | Maps the 8 integration drills |
+| `docs/cumulative-repetition-standard.md` | Defines the two-part lab structure and cumulative review rule |
 | `docs/environment-standard.md` | Defines hosts, snapshots, baseline packages, and evidence rules |
 | `docs/debian-rhel-comparison-matrix.md` | Tracks recurring Debian/Ubuntu vs RHEL-family differences |
 | `docs/bash-and-shell-progression.md` | Defines how Bash and shell skills progress across all labs |
@@ -154,10 +182,12 @@ drills/01-baseline-and-access-rebuild/lab-drill-01-baseline-and-access-rebuild.m
 
 ### How to Use This Repository
 
-Each lab should include:
+Each chapter lab should include:
 
+* Part 1 — New Chapter Content
+* Part 2 — Cumulative Repetition of All Previous Topics
 * Scenario
-* Reference material
+* Reference material using full chapters where books are used
 * Requirements
 * Constraints
 * Assumptions
