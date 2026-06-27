@@ -2,6 +2,8 @@
 
 Use this template for every LinuxLabs lab. Keep it evidence-based, operational, and production-focused.
 
+The learner should focus on solving the lab. Documentation, formatting, evidence organisation, and GitHub upload are handled after the learner provides command output, observations, issues encountered, and answers to the seven reflection questions.
+
 ---
 
 # Lab Title
@@ -60,13 +62,13 @@ The scenario should read like a ticket or operational request, not just a tutori
 
 ## 5. Constraints
 
-Record anything you must not do.
+Record anything the learner must not do.
 
 Examples:
 
 * Do not disable security controls permanently just to make the lab work.
 * Do not commit secrets, SSH private keys, credentials, PDFs, EPUBs, or company data.
-* Do not rely on commands you cannot explain.
+* Do not rely on commands that cannot be explained.
 * Do not mark the lab complete without post-reboot verification.
 * Do not treat AI output as proof without local verification.
 
@@ -114,6 +116,8 @@ Example:
 ## 9. Implementation Tasks
 
 Use these tasks as a guide, not as a full walkthrough.
+
+The learner solves the lab. The final documentation is produced after the learner provides evidence and reflection answers.
 
 ### Task 1 — Task name
 
@@ -199,7 +203,7 @@ Nothing counts unless it survives reboot.
 
 Use this section when AI was used during the lab.
 
-| AI use | What it helped with | What I independently verified | Evidence |
+| AI use | What it helped with | What was independently verified | Evidence |
 | --- | --- | --- | --- |
 | | | | |
 
@@ -278,13 +282,13 @@ State clearly whether the lab was completed.
 
 ## 22. What I Learned
 
-Write 3–6 bullet points.
+Summarise the learner's reflection answers into 3–6 bullet points.
 
 ---
 
 ## 23. What I Would Improve in Production
 
-Write 2–5 bullet points.
+Summarise production improvements from the learner's reflection answers.
 
 ---
 
@@ -311,6 +315,7 @@ Write 2–5 bullet points.
 * [ ] Decisions documented
 * [ ] Security and production considerations documented
 * [ ] Diagram added if useful
+* [ ] Seven reflection answers captured
 * [ ] Work committed with a clear message
 * [ ] Work uploaded to the correct topic folder
 * [ ] No secrets or private data committed
@@ -319,15 +324,12 @@ Write 2–5 bullet points.
 
 ## 26. Reflection Questions
 
+Ask exactly seven reflection questions at the end of the lab.
+
 1. What problem did this lab simulate?
-2. Which commands mattered most, and why?
-3. What differed between RHEL and Ubuntu?
-4. What broke, and how did you diagnose it?
-5. What evidence proves the final state works?
-6. Did the configuration survive reboot?
-7. What would be risky about doing this in production?
-8. Did AI help with explanation, review, troubleshooting, or documentation?
-9. What did you verify independently instead of trusting AI output?
-10. What would you automate next?
-11. What would you monitor?
-12. What documentation would another engineer need to support this system?
+2. What commands, files, or services mattered most in solving it?
+3. What evidence proves your solution worked?
+4. What broke, confused you, or required troubleshooting?
+5. What would be risky about doing this in production?
+6. Where did AI help, if at all, and what did you verify yourself?
+7. What would you improve, automate, or monitor next time?
