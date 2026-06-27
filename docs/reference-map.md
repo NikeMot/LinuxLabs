@@ -37,6 +37,19 @@ Use the full chapter to understand:
 
 The final lab must still be original work. Do not copy book text into the repository.
 
+### Two-Part Lab Rule
+
+Every chapter lab has two parts:
+
+```text
+Part 1 - New Chapter Content
+Part 2 - Cumulative Repetition of All Previous Topics
+```
+
+Part 1 uses the current full chapter.
+
+Part 2 repeats and combines all topics learned in earlier labs.
+
 ### Coverage Rule
 
 By the end of Lab 15, the series must cover the practical administration content from *Practical Linux System Administration* and the relevant supporting concepts from the other Linux and operating systems references.
@@ -65,6 +78,7 @@ By the end of Lab 15, the series must cover the practical administration content
 
 | Standard | Purpose |
 | --- | --- |
+| `docs/cumulative-repetition-standard.md` | Defines the two-part lab structure and cumulative review rule |
 | `docs/environment-standard.md` | Defines hosts, snapshots, baseline tools, and evidence rules |
 | `docs/debian-rhel-comparison-matrix.md` | Tracks recurring Ubuntu vs RHEL-family differences |
 | `docs/bash-and-shell-progression.md` | Defines Bash and shell progression across all labs |
