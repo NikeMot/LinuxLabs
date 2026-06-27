@@ -4,74 +4,51 @@
 
 The LinuxLabs repository contains my hands-on Linux system administration labs aimed at developing practical Linux, infrastructure, SRE operations, and AI-assisted operations skills.
 
-The lab series focuses on administering both **RHEL** and **Ubuntu** systems. The goal is not just to learn commands, but to build production-style operational judgement: build, verify, troubleshoot, document, recover, compare distributions, use AI responsibly, and explain decisions.
+The canonical LinuxLabs programme is now a **15-lab chapter-led series** based on *Practical Linux System Administration* by Kenneth Hess. Each lab maps to one chapter of that book and expands it with material from the other Linux and operating systems books in my Drive.
 
-The major skills covered in this repository are:
+The goal is not just to learn commands, but to build production-style operational judgement: build, verify, troubleshoot, document, recover, compare distributions, use AI responsibly, and explain decisions.
 
-* Linux foundations
-* Users, groups, sudo, and permissions
-* Software and repository management
-* systemd, boot, and service management
-* Storage, filesystems, swap, and LVM
-* Linux networking and name resolution
-* Security hardening, firewalls, SELinux, and AppArmor
-* Logging, troubleshooting, and incident reconstruction
-* Backup, restore, and recovery testing
-* Performance and capacity investigation
-* Bash automation, Ansible, and configuration management
-* Linux estate operations and capstone scenarios
-* AI-assisted Linux operations and documentation
+### Core Rule
 
-Each lab should be documented with requirements, constraints, implementation notes, commands used, verification evidence, issues encountered, decisions made, production considerations, AI usage notes where relevant, and reflection questions.
+One chapter equals one lab.
 
-### Goals
+```text
+15 chapters = 15 labs
+```
 
-The goals of this repository are:
+By the end of Lab 15, the LinuxLabs series should have covered the practical administration content from *Practical Linux System Administration* and the relevant supporting concepts from the other Linux, operating systems, cloud administration, and system administration books.
 
-* Build repeatable Linux administration skills through hands-on labs
-* Practise RHEL and Ubuntu administration side by side
-* Develop production-grade troubleshooting habits
-* Use AI as an assistant for explanation, documentation, command review, log summarisation, and hypothesis generation without outsourcing judgement
-* Document technical decisions clearly
-* Create evidence of operational thinking, verification, and recovery
-* Prepare for Linux system administrator, infrastructure engineer, SRE, platform engineering, and AI-enabled operations roles
+### Primary Reference
 
-### Skills Covered
-
-| Area | Status | Topics |
-| --- | --- | --- |
-| Linux foundations | Not started | shell, filesystem, documentation, baseline inventory |
-| Users, groups, and permissions | Not started | local users, sudo, groups, ACLs, umask |
-| Software management | Not started | apt, dnf, repositories, package ownership, updates |
-| systemd and services | Not started | units, targets, timers, journald, service recovery |
-| Storage and filesystems | Not started | partitions, filesystems, fstab, swap, LVM |
-| Networking | Not started | IP, routes, DNS, Netplan, NetworkManager, troubleshooting |
-| Security and hardening | Not started | firewalls, SSH hardening, SELinux, AppArmor, audit checks |
-| Logging and troubleshooting | Not started | journalctl, logs, incident timelines, break/fix evidence |
-| Backup and recovery | Not started | tar, rsync, restore testing, permissions, recovery runbooks |
-| Performance and capacity | Not started | CPU, memory, disk, processes, limits, bottlenecks |
-| Automation and configuration management | Not started | Bash health checks, Ansible, idempotency, drift control |
-| Linux estate operations | Not started | multi-server operations, capstone incidents, runbooks |
-| AI-assisted Linux operations | Not started | prompting, command review, log triage, documentation drafts, runbook generation, safety checks |
-
-### Repository Structure
-
-| Path | Purpose |
+| Role | Reference |
 | --- | --- |
-| `docs/` | General documentation, standards, templates, and repository decisions |
-| `01-linux-foundations/` | Shell, filesystem, baseline build, documentation, and investigation labs |
-| `02-users-groups-and-permissions/` | Local identity, sudo, permissions, ACLs, and shared directory labs |
-| `03-software-management/` | Package management, repositories, updates, and rollback labs |
-| `04-systemd-and-services/` | systemd units, boot targets, timers, journald, and service recovery labs |
-| `05-storage-and-filesystems/` | Partitions, filesystems, mounts, swap, LVM, and storage failure labs |
-| `06-networking/` | IP configuration, routing, DNS, firewalls, and network troubleshooting labs |
-| `07-security-and-hardening/` | SSH hardening, firewalls, SELinux, AppArmor, and baseline audit labs |
-| `08-logging-and-troubleshooting/` | Log investigation, incident reconstruction, and break/fix evidence labs |
-| `09-backup-and-recovery/` | Backup design, restore testing, and recovery runbook labs |
-| `10-performance-and-capacity/` | CPU, memory, disk, process, and service capacity investigation labs |
-| `11-automation-and-configuration-management/` | Bash automation, Ansible, cloud-init, and drift management labs |
-| `12-linux-estate-operations/` | Multi-server production simulation and capstone operational labs |
-| `13-ai-assisted-linux-operations/` | Responsible AI usage for Linux operations, troubleshooting, documentation, and safety review labs |
+| Main lab sequence | Practical Linux System Administration |
+| Execution standard | The Practice of System and Network Administration |
+| Cloud operations mindset | The Practice of Cloud System Administration |
+| Command-line depth | The Linux Command Line |
+| Modern Linux depth | Learning Modern Linux |
+| Operating system theory | Modern Operating Systems / Operating System Concepts |
+| AI support | Responsible AI-assisted operations notes and verified system evidence |
+
+### Lab Series
+
+| Lab | Folder | Practical Linux chapter | Status |
+| --- | --- | --- | --- |
+| 01 | `01-getting-started-with-linux/` | Getting Started with Linux | Not started |
+| 02 | `02-working-with-permissions-and-privileged-accounts/` | Working with Permissions and Privileged Accounts | Not started |
+| 03 | `03-customizing-the-user-experience/` | Customizing the User Experience | Not started |
+| 04 | `04-managing-users/` | Managing Users | Not started |
+| 05 | `05-connecting-to-a-network/` | Connecting to a Network | Not started |
+| 06 | `06-installing-and-uninstalling-software/` | Installing and Uninstalling Software | Not started |
+| 07 | `07-managing-storage/` | Managing Storage | Not started |
+| 08 | `08-maintaining-system-health/` | Maintaining System Health | Not started |
+| 09 | `09-monitoring-your-system/` | Monitoring Your System | Not started |
+| 10 | `10-scripting-and-automation/` | Scripting and Automation | Not started |
+| 11 | `11-deploying-samba-for-windows-compatibility/` | Deploying Samba for Windows Compatibility | Not started |
+| 12 | `12-troubleshooting-linux/` | Troubleshooting Linux | Not started |
+| 13 | `13-securing-your-system/` | Securing Your System | Not started |
+| 14 | `14-continuing-your-education/` | Continuing Your Education | Not started |
+| 15 | `15-making-career-moves/` | Making Career Moves | Not started |
 
 ### Naming Convention
 
@@ -81,7 +58,7 @@ Topic folders use this format:
 01-topic-name-written-lowercase
 ```
 
-Lab files inside topic folders should use this format:
+Lab files inside topic folders use this format:
 
 ```text
 lab-01-short-lab-title.md
@@ -90,12 +67,12 @@ lab-01-short-lab-title.md
 Example:
 
 ```text
-01-linux-foundations/lab-01-build-and-baseline-linux-servers.md
+01-getting-started-with-linux/lab-01-bootstrap-and-baseline-linux-server.md
 ```
 
 ### How to Use This Repository
 
-Each lab folder or lab file should include:
+Each lab should include:
 
 * Scenario
 * Reference material
@@ -106,7 +83,7 @@ Each lab folder or lab file should include:
 * Key commands used
 * Files created or changed
 * Verification evidence
-* RHEL vs Ubuntu comparison
+* RHEL vs Ubuntu comparison, where relevant
 * Break/fix scenario
 * Post-reboot verification
 * AI-assisted operations notes, where relevant
@@ -118,9 +95,13 @@ Each lab folder or lab file should include:
 * What I would improve in production
 * References used
 * Completion checklist
-* Reflection questions
+* Seven reflection questions
 
-Start with `01-linux-foundations` and progress numerically. Use `13-ai-assisted-linux-operations` for dedicated AI operations labs, but also include AI notes inside other labs where AI is useful for explanation, review, documentation, or troubleshooting.
+### Learner Workflow
+
+The learner solves the lab. Documentation, formatting, evidence organisation, and GitHub upload are handled after the lab is solved.
+
+The learner provides command output, observations, issues, final verification evidence, and answers to seven reflection questions.
 
 ### Security and Privacy Notes
 
@@ -146,4 +127,4 @@ Use AI for explanation, planning, command review, log summaries, runbook drafts,
 
 ### Lab Upload Rule
 
-Every new Linux lab should be committed to the correct numbered topic folder. Labs should not be placed at the repository root.
+Every new Linux lab must be committed to the correct numbered chapter folder. Labs should not be placed at the repository root.
