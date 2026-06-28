@@ -17,6 +17,8 @@ The final drill is an **SRE-style Linux operations capstone**. It must test serv
 
 Controlled break/fix practice is the most important practical mechanism in LinuxLabs. Every lab and drill should include a controlled failure, evidence-led diagnosis, safe repair, verification, and prevention note.
 
+Online documentation is required so implementation details stay current. Books provide structure and depth; official online documentation, local man pages, and package documentation confirm current commands, paths, package names, service behaviour, and release-specific differences.
+
 Bash and shell skill are taught throughout the whole programme. Bash is the primary shell. POSIX shell and KornShell awareness are included where relevant for enterprise UNIX/Linux environments.
 
 Every applicable lab must be completed on both a Debian-family system, normally Ubuntu Server LTS, and a RHEL-family system. Differences between the two must be documented as part of the final lab evidence.
@@ -37,6 +39,7 @@ Every chapter lab:
 Part 1 = new full-chapter content
 Part 2 = cumulative repetition of all previous topics
 Controlled break/fix = mandatory
+Online documentation check = mandatory
 ```
 
 Drill series:
@@ -60,6 +63,23 @@ By the end of Drill 08, the learner should be able to combine those skills under
 When a lab references a book chapter, the whole chapter should be used as the reference unit.
 
 Do not build labs from isolated fragments. Use the full chapter to understand the topic, context, warnings, commands, and operational implications. Final lab write-ups must remain original and must not copy book material.
+
+### Online Documentation Rule
+
+Every lab must check current online documentation where implementation details could change.
+
+Use online documentation to confirm:
+
+* package names
+* service names
+* configuration paths
+* firewall behaviour
+* security controls
+* release-specific behaviour
+* Ansible module behaviour
+* break/fix recovery methods
+
+Prefer official vendor or project documentation first, then local man pages and package documentation from the lab system.
 
 ### Cumulative Repetition Rule
 
@@ -109,6 +129,7 @@ A lab is not complete until the relevant work has been attempted, verified, and 
 | Command-line depth | The Linux Command Line |
 | Modern Linux depth | Learning Modern Linux |
 | Operating system theory | Modern Operating Systems / Operating System Concepts |
+| Current implementation detail | Official online documentation, local man pages, and package documentation |
 | Bash and shell progression | Bash, POSIX shell, and KornShell awareness |
 | Role-readiness target | DXC Linux System Administrator readiness map |
 | SRE capstone target | SRE capstone standard |
@@ -155,6 +176,7 @@ A lab is not complete until the relevant work has been attempted, verified, and 
 | `docs/drill-series-map.md` | Maps the 8 integration drills |
 | `docs/cumulative-repetition-standard.md` | Defines the two-part lab structure and cumulative review rule |
 | `docs/break-fix-standard.md` | Defines mandatory controlled failure, diagnosis, repair, verification, and prevention practice |
+| `docs/online-documentation-standard.md` | Defines how current official online documentation is checked and recorded |
 | `docs/environment-standard.md` | Defines hosts, snapshots, baseline packages, and evidence rules |
 | `docs/debian-rhel-comparison-matrix.md` | Tracks recurring Debian/Ubuntu vs RHEL-family differences |
 | `docs/bash-and-shell-progression.md` | Defines how Bash and shell skills progress across all labs |
@@ -207,6 +229,7 @@ Each chapter lab should include:
 * Part 1 — New Chapter Content
 * Part 2 — Cumulative Repetition of All Previous Topics
 * Controlled break/fix scenario
+* Online documentation check
 * Scenario
 * Reference material using full chapters where books are used
 * Requirements
