@@ -2,7 +2,7 @@
 
 ### Purpose
 
-This file maps the LinuxLabs programme to the reference books, operational thinking sources, and AI-assisted operations standards.
+This file maps the LinuxLabs programme to the reference books, operational thinking sources, online documentation sources, and AI-assisted operations standards.
 
 The canonical structure follows the 15 chapters of *Practical Linux System Administration*.
 
@@ -16,8 +16,11 @@ The canonical structure follows the 15 chapters of *Practical Linux System Admin
 | The Linux Command Line | Shell fluency, filesystem navigation, text processing, scripting fundamentals |
 | Learning Modern Linux | Modern Linux concepts, cloud-native context, containers, observability, modern tooling |
 | Modern Operating Systems / Operating System Concepts | Processes, memory, filesystems, I/O, security, concurrency, and OS theory |
-| Red Hat documentation | RHEL-specific implementation and administration guidance |
-| Ubuntu documentation | Ubuntu-specific implementation and administration guidance |
+| Red Hat documentation | Current RHEL-specific implementation and administration guidance |
+| Ubuntu documentation | Current Ubuntu-specific implementation and administration guidance |
+| Debian documentation | Debian-family administration guidance and package behaviour |
+| Project documentation | Current systemd, Ansible, Samba, OpenSSH, Linux kernel, and related project behaviour |
+| Local man pages and package documentation | Installed-system truth for command options, config files, service behaviour, and package versions |
 | AI-assisted operations notes | Prompting, command review, log summaries, runbook drafts, comparison notes, and safety checks |
 
 ### Full-Chapter Reference Rule
@@ -36,6 +39,14 @@ Use the full chapter to understand:
 * chapter summary or conclusions
 
 The final lab must still be original work. Do not copy book text into the repository.
+
+### Online Documentation Rule
+
+Books provide structure and depth. Online documentation provides current implementation detail.
+
+Every lab must check current online documentation where commands, package names, service names, configuration paths, security controls, release behaviour, or tool syntax may have changed.
+
+Prefer official vendor or project documentation, then local man pages and package documentation from the lab system.
 
 ### Two-Part Lab Rule
 
@@ -79,6 +90,8 @@ By the end of Lab 15, the series must cover the practical administration content
 | Standard | Purpose |
 | --- | --- |
 | `docs/cumulative-repetition-standard.md` | Defines the two-part lab structure and cumulative review rule |
+| `docs/break-fix-standard.md` | Defines mandatory controlled failure, diagnosis, repair, verification, and prevention practice |
+| `docs/online-documentation-standard.md` | Defines how current official online documentation is checked and recorded |
 | `docs/environment-standard.md` | Defines hosts, snapshots, baseline tools, and evidence rules |
 | `docs/debian-rhel-comparison-matrix.md` | Tracks recurring Ubuntu vs RHEL-family differences |
 | `docs/bash-and-shell-progression.md` | Defines Bash and shell progression across all labs |
@@ -102,6 +115,6 @@ AI output should not be treated as evidence. Every important result must be veri
 
 ### Reference Usage Rule
 
-Do not copy book material into the repository.
+Do not copy book material or large sections of online documentation into the repository.
 
-Use full chapters to understand the task, then write original notes, evidence, and reflections.
+Use full chapters to understand book-based tasks. Use online documentation to confirm current implementation details. Then write original notes, evidence, and reflections.
