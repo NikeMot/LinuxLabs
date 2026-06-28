@@ -13,6 +13,17 @@ The series follows the 15 chapters of *Practical Linux System Administration*. E
 15 chapters = 15 labs
 ```
 
+### Story-Driven Lab Rule
+
+Every lab must have a realistic story and an operational reason.
+
+```text
+No story = no lab.
+No operational reason = no command.
+```
+
+Every lab must explain who is asking for the work, what system is affected, why the work matters, what risk exists, what evidence proves success, and how the work relates to real Linux administration or SRE practice.
+
 ### Two-Part Lab Rule
 
 Every chapter lab must have two parts:
@@ -64,6 +75,7 @@ A lab is incomplete if only one family is attempted, unless the lab explicitly m
 | Reference | Role in the lab series |
 | --- | --- |
 | Practical Linux System Administration | Primary chapter sequence and lab spine; use full chapters |
+| Story-driven lab standard | Scenario-first lab design and command justification |
 | The Practice of System and Network Administration | Execution standard: operational discipline, documentation, repeatability, change control, service ownership, incident thinking |
 | The Practice of Cloud System Administration | Reliability, automation, scalable operations, cloud-style admin habits |
 | The Linux Command Line | Command-line depth, shell fluency, text processing, filesystem navigation; use full relevant chapters |
@@ -121,6 +133,9 @@ Every lab should be run like operational work, not like a passive tutorial.
 Each lab must include:
 
 * a realistic scenario or ticket
+* a manager, team, customer, or incident-style requirement
+* a clear operational reason for the work
+* command justification for important commands
 * Part 1 new chapter content
 * Part 2 cumulative repetition
 * mandatory controlled break/fix practice
