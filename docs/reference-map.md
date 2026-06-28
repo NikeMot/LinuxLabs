@@ -11,6 +11,7 @@ The canonical structure follows the 15 chapters of *Practical Linux System Admin
 | Source | Used for |
 | --- | --- |
 | Practical Linux System Administration | Primary 15-chapter lab spine |
+| Story-driven lab standard | Scenario-first lab design and command justification |
 | The Practice of System and Network Administration | Operational execution standard: documentation, repeatability, service ownership, incident thinking, change discipline |
 | The Practice of Cloud System Administration | Reliability, automation, scalable operations, cloud-style administration, production readiness |
 | The Linux Command Line | Shell fluency, filesystem navigation, text processing, scripting fundamentals |
@@ -22,6 +23,17 @@ The canonical structure follows the 15 chapters of *Practical Linux System Admin
 | Project documentation | Current systemd, Ansible, Samba, OpenSSH, Linux kernel, and related project behaviour |
 | Local man pages and package documentation | Installed-system truth for command options, config files, service behaviour, and package versions |
 | AI-assisted operations notes | Prompting, command review, log summaries, runbook drafts, comparison notes, and safety checks |
+
+### Story-Driven Lab Rule
+
+Every lab must have a story and an operational reason.
+
+```text
+No story = no lab.
+No operational reason = no command.
+```
+
+A lab must explain who is asking for the work, what system is affected, why the work matters, what risk exists, what evidence proves success, and how the work relates to real Linux administration or SRE practice.
 
 ### Full-Chapter Reference Rule
 
@@ -89,6 +101,7 @@ By the end of Lab 15, the series must cover the practical administration content
 
 | Standard | Purpose |
 | --- | --- |
+| `docs/story-driven-lab-standard.md` | Defines scenario-first lab design and command justification |
 | `docs/cumulative-repetition-standard.md` | Defines the two-part lab structure and cumulative review rule |
 | `docs/break-fix-standard.md` | Defines mandatory controlled failure, diagnosis, repair, verification, and prevention practice |
 | `docs/online-documentation-standard.md` | Defines how current official online documentation is checked and recorded |
