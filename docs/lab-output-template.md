@@ -1,6 +1,6 @@
 # Linux Lab Output Template
 
-Use this template for every LinuxLabs lab. Keep it evidence-based, operational, and production-focused.
+Use this template for every LinuxLabs lab. Keep it evidence-based, operational, current, and production-focused.
 
 The learner should focus on solving the lab. Documentation, formatting, evidence organisation, and GitHub upload are handled after the learner provides command output, observations, issues encountered, and answers to the seven reflection questions.
 
@@ -15,6 +15,12 @@ Every lab must include controlled break/fix practice.
 
 ```text
 No break/fix = lab not complete.
+```
+
+Every lab must include an online documentation check.
+
+```text
+No current documentation check = lab not complete.
 ```
 
 When a book chapter is used as a reference, use the full chapter as the reference unit, not isolated extracts.
@@ -41,6 +47,8 @@ When a book chapter is used as a reference, use the full chapter as the referenc
 
 **Break/fix status:** Not started / In progress / Completed / Blocked
 
+**Online documentation check:** Not started / Completed / Not applicable with reason
+
 ### Objective
 
 State the purpose of the lab in 2–4 lines.
@@ -57,7 +65,7 @@ The scenario should read like a ticket or operational request, not just a tutori
 
 ## 3. Reference Material
 
-| Area | Suggested reference | Chapter usage |
+| Area | Suggested reference | Chapter or documentation usage |
 | --- | --- | --- |
 | Linux command-line usage | The Linux Command Line | Use full relevant chapter |
 | Modern Linux concepts | Learning Modern Linux | Use full relevant chapter |
@@ -65,13 +73,40 @@ The scenario should read like a ticket or operational request, not just a tutori
 | Operating system concepts | Modern Operating Systems / Operating System Concepts | Use full relevant chapter |
 | Operational thinking | The Practice of System and Network Administration | Use full relevant chapter or section-level operational principle only where no chapter mapping exists |
 | Cloud operations thinking | The Practice of Cloud System Administration | Use full relevant chapter where used |
-| RHEL-specific guidance | Red Hat documentation | Use official task guidance |
-| Ubuntu-specific guidance | Ubuntu documentation | Use official task guidance |
+| RHEL-specific guidance | Red Hat documentation | Use current official task guidance |
+| Ubuntu-specific guidance | Ubuntu Server documentation | Use current official task guidance |
+| Debian-family guidance | Debian documentation | Use current official task guidance where relevant |
+| systemd | systemd documentation and local man pages | Use current project docs and installed-system man pages |
+| Ansible | Ansible documentation | Use documentation matching installed Ansible version |
+| Samba/NFS/OpenSSH | Official project or vendor documentation | Use current official documentation |
+| Local system documentation | man pages, package docs, command help | Use installed-system truth |
 | AI-assisted operations | Lab notes, official product documentation, and verified system evidence | AI is not evidence |
 
 ---
 
-## 4. Requirements
+## 4. Online Documentation Check
+
+Use this section to prove current documentation was checked before relying on commands, package names, service names, config paths, firewall behaviour, or security controls.
+
+| Source used | Topic checked | Date checked | Version/distribution | Lab decision affected |
+| --- | --- | --- | --- | --- |
+| | | | | |
+| | | | | |
+
+### Documentation Notes
+
+Record any important version-specific findings.
+
+Examples:
+
+* Ubuntu service name differed from RHEL-family service name.
+* Red Hat guidance used firewalld rather than ufw.
+* Local man page confirmed the option used in this lab.
+* Package name differed between `apt` and `dnf`.
+
+---
+
+## 5. Requirements
 
 | ID | Requirement | Debian/Ubuntu status | RHEL-family status |
 | --- | --- | --- | --- |
@@ -81,7 +116,7 @@ The scenario should read like a ticket or operational request, not just a tutori
 
 ---
 
-## 5. Constraints
+## 6. Constraints
 
 Record anything the learner must not do.
 
@@ -94,12 +129,14 @@ Examples:
 * Do not treat AI output as proof without local verification.
 * Do not mark a lab complete if only one distribution family has been attempted, unless the other is explicitly out of scope with a reason.
 * Do not mark a lab complete without controlled break/fix practice.
+* Do not mark a lab complete without checking current documentation where implementation details could change.
 * Do not perform break/fix on employer, production, shared, or sensitive systems.
 * Do not use isolated book extracts as the lab reference when a full chapter is available.
+* Do not copy large sections of online documentation into the repository.
 
 ---
 
-## 6. Assumptions
+## 7. Assumptions
 
 Record assumptions here.
 
@@ -111,10 +148,11 @@ Examples:
 * Documentation should be good enough for another engineer to follow.
 * Part 2 repeats all topics previously learned in the series.
 * Break/fix work is performed only after a baseline state or snapshot exists.
+* Official online documentation and local man pages are used to confirm current implementation details.
 
 ---
 
-## 7. Expected Lab Structure
+## 8. Expected Lab Structure
 
 Use a structure appropriate for the lab.
 
@@ -127,11 +165,12 @@ Example:
 
 ---
 
-## 8. Deliverables
+## 9. Deliverables
 
 | Deliverable | Purpose |
 | --- | --- |
 | Lab write-up | Records requirements, implementation, evidence, and reflection |
+| Online documentation check | Proves current official/local documentation was checked |
 | Part 1 evidence | Proves the new chapter content was completed |
 | Part 2 evidence | Proves previous topics were repeated and combined |
 | Debian/Ubuntu evidence | Proves the work succeeded on Ubuntu or another Debian-family system |
@@ -143,7 +182,7 @@ Example:
 
 ---
 
-## 9. Part 1 — New Chapter Content
+## 10. Part 1 — New Chapter Content
 
 Part 1 focuses on the current full chapter.
 
@@ -172,7 +211,7 @@ Where practical, include a controlled failure related to the new chapter content
 
 ---
 
-## 10. Part 2 — Cumulative Repetition of All Previous Topics
+## 11. Part 2 — Cumulative Repetition of All Previous Topics
 
 Part 2 repeats all topics learned before this lab.
 
@@ -218,27 +257,27 @@ From Lab 05 onward, Part 2 should include its own cumulative break/fix scenario 
 
 ---
 
-## 11. Key Commands Used
+## 12. Key Commands Used
 
 Record important commands only.
 
-| Command | Part | Debian/Ubuntu purpose | RHEL-family purpose |
-| --- | --- | --- | --- |
-| | Part 1 / Part 2 / Break-Fix | | |
-| | Part 1 / Part 2 / Break-Fix | | |
-
----
-
-## 12. Files Created or Changed
-
-| Path | Part | Debian/Ubuntu | RHEL-family | Purpose |
+| Command | Part | Debian/Ubuntu purpose | RHEL-family purpose | Documentation checked |
 | --- | --- | --- | --- | --- |
 | | Part 1 / Part 2 / Break-Fix | | | |
 | | Part 1 / Part 2 / Break-Fix | | | |
 
 ---
 
-## 13. Debian/Ubuntu Implementation Evidence
+## 13. Files Created or Changed
+
+| Path | Part | Debian/Ubuntu | RHEL-family | Purpose | Documentation checked |
+| --- | --- | --- | --- | --- | --- |
+| | Part 1 / Part 2 / Break-Fix | | | | |
+| | Part 1 / Part 2 / Break-Fix | | | | |
+
+---
+
+## 14. Debian/Ubuntu Implementation Evidence
 
 This section proves the lab worked on Ubuntu or another Debian-family system.
 
@@ -249,7 +288,7 @@ This section proves the lab worked on Ubuntu or another Debian-family system.
 
 ---
 
-## 14. RHEL-Family Implementation Evidence
+## 15. RHEL-Family Implementation Evidence
 
 This section proves the lab worked on RHEL, Rocky Linux, AlmaLinux, or CentOS Stream.
 
@@ -260,7 +299,7 @@ This section proves the lab worked on RHEL, Rocky Linux, AlmaLinux, or CentOS St
 
 ---
 
-## 15. RHEL vs Ubuntu Comparison
+## 16. RHEL vs Ubuntu Comparison
 
 | Area | RHEL-family | Debian/Ubuntu | Notes |
 | --- | --- | --- | --- |
@@ -273,10 +312,11 @@ This section proves the lab worked on RHEL, Rocky Linux, AlmaLinux, or CentOS St
 | Filesystems/storage | | | |
 | Shell/user environment | | | |
 | Break/fix diagnosis | | | |
+| Documentation source | | | |
 
 ---
 
-## 16. Mandatory Break/Fix Scenario
+## 17. Mandatory Break/Fix Scenario
 
 No lab is complete without this section.
 
@@ -301,6 +341,7 @@ One break/fix scenario in Part 1 and one break/fix scenario in Part 2.
 | Symptoms observed | |
 | Diagnostic commands used | |
 | Likely or confirmed cause | |
+| Documentation checked | |
 | Fix applied | |
 | Recovery evidence | |
 | Post-reboot evidence where relevant | |
@@ -314,7 +355,7 @@ One break/fix scenario in Part 1 and one break/fix scenario in Part 2.
 
 ---
 
-## 17. Post-Reboot Verification
+## 18. Post-Reboot Verification
 
 Nothing counts unless it survives reboot.
 
@@ -326,7 +367,7 @@ Nothing counts unless it survives reboot.
 
 ---
 
-## 18. AI-Assisted Operations Notes
+## 19. AI-Assisted Operations Notes
 
 Use this section when AI was used during the lab.
 
@@ -340,7 +381,7 @@ If AI was not used, write:
 
 ---
 
-## 19. Diagram
+## 20. Diagram
 
 Add a diagram if useful.
 
@@ -350,7 +391,7 @@ If no diagram is required, write:
 
 ---
 
-## 20. Issues Encountered
+## 21. Issues Encountered
 
 | Issue | Part | Family affected | Cause | Fix |
 | --- | --- | --- | --- | --- |
@@ -362,16 +403,16 @@ If there were no issues, write:
 
 ---
 
-## 21. Decisions Made
+## 22. Decisions Made
 
-| Decision | Part | Reason |
-| --- | --- | --- |
-| | Part 1 / Part 2 / Break-Fix | |
-| | Part 1 / Part 2 / Break-Fix | |
+| Decision | Part | Reason | Documentation or evidence used |
+| --- | --- | --- | --- |
+| | Part 1 / Part 2 / Break-Fix | | |
+| | Part 1 / Part 2 / Break-Fix | | |
 
 ---
 
-## 22. Security and Production Considerations
+## 23. Security and Production Considerations
 
 Explain the production relevance of the lab.
 
@@ -387,45 +428,48 @@ Cover where relevant:
 * operational risk
 * documentation quality
 * distro differences
+* current documentation checked
 * responsible AI usage
 * cumulative repetition and skill retention
 * what would prevent the break/fix issue recurring in production
 
 ---
 
-## 23. Final Outcome
+## 24. Final Outcome
 
-State clearly whether Part 1, Part 2, and the mandatory break/fix scenario were completed on both Debian/Ubuntu and RHEL-family systems.
+State clearly whether Part 1, Part 2, the mandatory break/fix scenario, and the online documentation check were completed on both Debian/Ubuntu and RHEL-family systems.
 
 ---
 
-## 24. What I Learned
+## 25. What I Learned
 
 Summarise the learner's reflection answers into 3–6 bullet points.
 
 ---
 
-## 25. What I Would Improve in Production
+## 26. What I Would Improve in Production
 
 Summarise production improvements from the learner's reflection answers.
 
 ---
 
-## 26. References Used
+## 27. References Used
 
-| Reference | Chapter used | Used for |
-| --- | --- | --- |
-| | Full chapter / official guidance | |
-| | Full chapter / official guidance | |
+| Reference | Chapter/documentation used | Used for | Date checked |
+| --- | --- | --- | --- |
+| | Full chapter / official guidance / local man page | | |
+| | Full chapter / official guidance / local man page | | |
 
 ---
 
-## 27. Completion Checklist
+## 28. Completion Checklist
 
 * [ ] Requirements understood
 * [ ] Part 1 new chapter content completed
 * [ ] Part 2 cumulative repetition completed
 * [ ] Full chapter used where a book chapter was referenced
+* [ ] Online documentation checked where implementation details could change
+* [ ] Local man pages or package documentation checked where relevant
 * [ ] Debian/Ubuntu implementation completed or explicitly marked out of scope with a reason
 * [ ] RHEL-family implementation completed or explicitly marked out of scope with a reason
 * [ ] Debian/Ubuntu verification evidence captured
@@ -451,14 +495,14 @@ Summarise production improvements from the learner's reflection answers.
 
 ---
 
-## 28. Reflection Questions
+## 29. Reflection Questions
 
 Ask exactly seven reflection questions at the end of the lab.
 
 1. What problem did this lab simulate?
 2. What new chapter content did you practise, and what previous topics did Part 2 force you to repeat?
 3. What did you deliberately break or diagnose, and what evidence led you to the fix?
-4. What commands, files, or services mattered most in solving it on Debian/Ubuntu and RHEL-family systems?
-5. What evidence proves your solution worked on both families?
+4. What current documentation or local man pages did you check, and what decision did they affect?
+5. What evidence proves your solution worked on both Debian/Ubuntu and RHEL-family systems?
 6. Where did AI help, if at all, and what did you verify yourself?
 7. What would you improve, automate, or monitor next time?
