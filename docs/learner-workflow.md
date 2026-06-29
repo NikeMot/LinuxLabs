@@ -6,11 +6,19 @@ This document defines how LinuxLabs should be run.
 
 The learner should focus on solving the lab. Documentation, formatting, evidence organisation, and GitHub upload are handled after the lab is solved.
 
+### Lab Duration Rule
+
+Each lab must be designed to take **60–90 minutes maximum** for the active solving portion.
+
+If a lab cannot realistically be completed within 90 minutes, it must be split into smaller labs rather than expanded into a large multi-hour exercise.
+
+The timebox covers the learner's hands-on work: reading the scenario, planning, implementing, troubleshooting, verification, and capturing useful evidence. Final documentation and GitHub upload are handled separately after the learner provides evidence and reflection answers.
+
 ### Workflow
 
 1. A lab is created in the correct topic folder.
 2. The learner reads the scenario, requirements, constraints, and tasks.
-3. The learner solves the lab on the target system.
+3. The learner solves the lab on the target system within the 60–90 minute timebox.
 4. The learner provides command output, observations, issues, and final verification evidence.
 5. Seven reflection questions are asked.
 6. The learner answers the seven reflection questions.
@@ -33,6 +41,7 @@ The learner is responsible for:
 The documentation should capture:
 
 * lab summary
+* estimated duration and actual duration where known
 * scenario
 * requirements
 * constraints
