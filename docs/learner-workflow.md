@@ -6,6 +6,25 @@ This document defines how LinuxLabs should be run.
 
 The learner should focus on solving the lab. Documentation, formatting, evidence organisation, and GitHub upload are handled after the lab is solved.
 
+### Curriculum Structure
+
+LinuxLabs uses a two-book spine:
+
+1. **How Linux Works, 3rd Edition**
+2. **The Linux Command Line, 3rd Edition**
+
+Each standard lab combines:
+
+* 1 chapter from **How Linux Works**
+* 2 chapters from **The Linux Command Line**
+* official documentation relevant to the lab scenario
+
+The programme contains **17 standard labs** plus **1 final capstone lab**.
+
+The first 17 labs cover all 17 chapters of **How Linux Works** and the first 34 chapters of **The Linux Command Line**.
+
+The final capstone uses the remaining **The Linux Command Line** chapters and integrates the earlier Linux administration topics.
+
 ### Lab Duration Rule
 
 Each lab must be designed to take **60–90 minutes maximum** for the active solving portion.
@@ -17,7 +36,7 @@ The timebox covers the learner's hands-on work: reading the scenario, planning, 
 ### Workflow
 
 1. A lab is created in the correct topic folder.
-2. The learner reads the scenario, requirements, constraints, and tasks.
+2. The learner reads the scenario, requirements, constraints, assigned book chapters, and official documentation requirement.
 3. The learner solves the lab on the target system within the 60–90 minute timebox.
 4. The learner provides command output, observations, issues, and final verification evidence.
 5. Seven reflection questions are asked.
@@ -28,6 +47,8 @@ The timebox covers the learner's hands-on work: reading the scenario, planning, 
 
 The learner is responsible for:
 
+* reading the assigned chapter material
+* checking the required official documentation
 * understanding the scenario
 * attempting the implementation
 * running commands on the lab system
@@ -41,6 +62,8 @@ The learner is responsible for:
 The documentation should capture:
 
 * lab summary
+* assigned book chapters
+* official documentation checked
 * estimated duration and actual duration where known
 * scenario
 * requirements
@@ -50,9 +73,8 @@ The documentation should capture:
 * key commands used
 * files created or changed
 * verification evidence
-* RHEL vs Ubuntu comparison where relevant
-* break/fix outcome
-* post-reboot verification
+* break/fix outcome where practical
+* post-reboot verification where relevant
 * AI-assisted operations notes where relevant
 * issues encountered
 * decisions made
